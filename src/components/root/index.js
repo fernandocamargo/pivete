@@ -1,20 +1,50 @@
-import random from "lodash/random";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import Table from "react-pivottable/PivotTableUI";
-import "react-pivottable/pivottable.css";
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
+import { useEffect, useMemo, useState } from "react";
+import styled from "styled-components";
+
+export const enhance = (component) => styled(component)`
+  table {
+    border: dotted 1px red;
+  }
+
+  td,
+  th {
+    border: dotted 1px blue;
+  }
+
+  div {
+    display: flex;
+  }
+
+  pre {
+    font-size: 0.75rem;
+    width: 50%;
+  }
+`;
 
 export const serialize = (response) => response.json();
 
-export default () => {
-  const [data, setData] = useState();
-  const [settings, setSettings] = useState();
-  const derivedAttributes = useMemo(
-    () => ({
-      "Budget vs. Forecast": () => random(1, 1000),
-    }),
-    []
-  );
-  const onChange = useCallback((event) => setSettings(event), []);
+export default enhance(({ className }) => {
+  const [data, setData] = useState([]);
+  const formatted = useMemo(() => {
+    const indexes = { fields: {}, values: {} };
+    const parse = (stack, item, index) => {
+      const group = ({ fields, values }, [field, value], _index) => {
+        return {
+          fields: Object.assign(fields, { [field]: _index }),
+          values: Object.assign(values, {
+            [field]: Object.assign(values?.[field] || {}, {
+              [value]: (values?.[field]?.[value] || []).concat(index),
+            }),
+          }),
+        };
+      };
+
+      return Object.entries(item).reduce(group, stack);
+    };
+
+    return data.reduce(parse, indexes);
+  }, [data]);
 
   useEffect(() => {
     const persist = (response) => setData(response.data);
@@ -23,13 +53,90 @@ export default () => {
   }, []);
 
   return data ? (
-    <Table
-      data={data}
-      derivedAttributes={derivedAttributes}
-      onChange={onChange}
-      {...settings}
-    />
+    <div className={className}>
+      <table>
+        <thead>
+          <tr>
+            <th rowSpan={4}>Rows</th>
+            <th colSpan={24}>Columns</th>
+          </tr>
+          <tr>
+            <th colSpan={12}>2022</th>
+            <th colSpan={12}>2021</th>
+          </tr>
+          <tr>
+            <th colSpan={3}>Jan</th>
+            <th colSpan={3}>Feb</th>
+            <th colSpan={3}>Mar</th>
+            <th colSpan={3}>Apr</th>
+            <th colSpan={3}>Jan</th>
+            <th colSpan={3}>Feb</th>
+            <th colSpan={3}>Mar</th>
+            <th colSpan={3}>Apr</th>
+          </tr>
+          <tr>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+            <th>Actual</th>
+            <th>Budget</th>
+            <th>Delta %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Customer Success</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <pre>{JSON.stringify(data, null, 1)}</pre>
+        <pre>{JSON.stringify(formatted, null, 1)}</pre>
+      </div>
+    </div>
   ) : (
     "Loading..."
   );
-};
+});
