@@ -27,16 +27,18 @@ export const serialize = (response) => response.json();
 export default enhance(({ className }) => {
   const [data, setData] = useState([]);
   const formatted = useMemo(() => {
-    const indexes = { fields: {}, values: {} };
+    const indexes = { indexes: { fields: {}, values: {} } };
     const parse = (stack, item, index) => {
-      const group = ({ fields, values }, [field, value], _index) => {
+      const group = ({ indexes }, [field, value], _index) => {
         return {
-          fields: Object.assign(fields, { [field]: _index }),
-          values: Object.assign(values, {
-            [field]: Object.assign(values?.[field] || {}, {
-              [value]: (values?.[field]?.[value] || []).concat(index),
+          indexes: {
+            fields: Object.assign(indexes.fields, { [field]: _index }),
+            values: Object.assign(indexes.values, {
+              [field]: Object.assign(indexes.values?.[field] || {}, {
+                [value]: (indexes.values?.[field]?.[value] || []).concat(index),
+              }),
             }),
-          }),
+          },
         };
       };
 
@@ -54,6 +56,11 @@ export default enhance(({ className }) => {
 
   return data ? (
     <div className={className}>
+      <form>
+        <fieldset>
+          <legend>Settings</legend>
+        </fieldset>
+      </form>
       <table>
         <thead>
           <tr>
