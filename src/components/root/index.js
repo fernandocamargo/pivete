@@ -1,10 +1,14 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
+import { property } from "lodash";
 import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
+
+import { serialize } from "./helpers";
 
 export const enhance = (component) => styled(component)`
   table {
     border: dotted 1px red;
+    width: 100%;
   }
 
   td,
@@ -22,21 +26,21 @@ export const enhance = (component) => styled(component)`
   }
 `;
 
-export const serialize = (response) => response.json();
-
 export default enhance(({ className }) => {
-  const [data, setData] = useState([]);
+  const [[data], persist] = useState([[]]);
   const formatted = useMemo(() => {
     const indexes = { indexes: { fields: {}, values: {} } };
     const parse = (stack, item, index) => {
-      const group = ({ indexes }, [field, value], _index) => {
+      const group = (stack, [name, value], _index) => {
+        const current = stack.indexes.values?.[name] || {};
+        const collection = current?.[value] || [];
+        const next = collection.concat(index);
+
         return {
           indexes: {
-            fields: Object.assign(indexes.fields, { [field]: _index }),
-            values: Object.assign(indexes.values, {
-              [field]: Object.assign(indexes.values?.[field] || {}, {
-                [value]: (indexes.values?.[field]?.[value] || []).concat(index),
-              }),
+            fields: Object.assign(stack.indexes.fields, { [name]: _index }),
+            values: Object.assign(stack.indexes.values, {
+              [name]: Object.assign(current, { [value]: next }),
             }),
           },
         };
@@ -49,9 +53,13 @@ export default enhance(({ className }) => {
   }, [data]);
 
   useEffect(() => {
-    const persist = (response) => setData(response.data);
-
-    window.fetch("/assets/json/mock/data.json").then(serialize).then(persist);
+    Promise.all([
+      window
+        .fetch("/assets/json/mock/data.json")
+        .then(serialize)
+        .then(property("data")),
+      import("./mock").then(property("default")),
+    ]).then(persist);
   }, []);
 
   return data ? (
@@ -64,12 +72,14 @@ export default enhance(({ className }) => {
       <table>
         <thead>
           <tr>
-            <th rowSpan={4}>Rows</th>
+            <th colSpan={3} rowSpan={4}>
+              Rows
+            </th>
             <th colSpan={24}>Columns</th>
           </tr>
           <tr>
-            <th colSpan={12}>2022</th>
             <th colSpan={12}>2021</th>
+            <th colSpan={12}>2022</th>
           </tr>
           <tr>
             <th colSpan={3}>Jan</th>
@@ -110,7 +120,474 @@ export default enhance(({ className }) => {
         </thead>
         <tbody>
           <tr>
+            <td rowSpan={9}>Berlin</td>
+            <td rowSpan={3}>Sales</td>
             <td>Customer Success</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Retention</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Leads</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td rowSpan={3}>Marketing</td>
+            <td>SEO</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Social Media</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Branding</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td rowSpan={3}>Finance</td>
+            <td>RH</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Accounting</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Operations</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td rowSpan={9}>São Paulo</td>
+            <td rowSpan={3}>Sales</td>
+            <td>Customer Success</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Retention</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Leads</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td rowSpan={3}>Marketing</td>
+            <td>SEO</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Social Media</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Branding</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td rowSpan={3}>Finance</td>
+            <td>RH</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Accounting</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+            <td>322,380</td>
+            <td>122,380</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Operations</td>
             <td>322,380</td>
             <td>122,380</td>
             <td>60%</td>
