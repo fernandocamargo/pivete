@@ -1,84 +1,475 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArray": true}] */
 export default [
   {
-    label: "Berlin",
+    label: "Office 2",
+    type: "office_id",
     value: [
       {
-        label: "Sales",
+        label: "General & Administrative",
+        type: "cc_level1",
         value: [
           {
-            label: "Customer Success",
+            label: "Finance, BI & Operations",
+            type: "cc_level2",
             value: [
               {
-                label: "2021",
+                label: "Current assets",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
               },
               {
-                label: "2022",
+                label: "Retention",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                label: "Leads",
+                type: "coa_level1",
+                value: [
+                  {
+                    label: "2021",
+                    type: "year",
+                    value: [
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Mar",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
@@ -86,78 +477,467 @@ export default [
             ],
           },
           {
-            label: "Retention",
+            label: "Marketing",
+            type: "cc_level2",
             value: [
               {
-                label: "2021",
+                label: "SEO",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
               },
               {
-                label: "2022",
+                label: "Social Media",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                label: "Branding",
+                type: "coa_level1",
+                value: [
+                  {
+                    label: "2021",
+                    type: "year",
+                    value: [
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Mar",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
@@ -165,78 +945,467 @@ export default [
             ],
           },
           {
-            label: "Leads",
+            label: "Finance",
+            type: "cc_level2",
             value: [
               {
-                label: "2021",
+                label: "RH",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
               },
               {
-                label: "2022",
+                label: "Accounting",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                label: "Operations",
+                type: "coa_level1",
+                value: [
+                  {
+                    label: "2021",
+                    type: "year",
+                    value: [
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Mar",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
@@ -246,81 +1415,471 @@ export default [
         ],
       },
       {
-        label: "Marketing",
+        label: "Product",
+        type: "cc_level1",
         value: [
           {
-            label: "Customer Success",
+            label: "Finance, BI & Operations",
+            type: "cc_level2",
             value: [
               {
-                label: "2021",
+                label: "Current assets",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
               },
               {
-                label: "2022",
+                label: "Retention",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                label: "Leads",
+                type: "coa_level1",
+                value: [
+                  {
+                    label: "2021",
+                    type: "year",
+                    value: [
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Mar",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
@@ -328,78 +1887,467 @@ export default [
             ],
           },
           {
-            label: "Retention",
+            label: "Marketing",
+            type: "cc_level2",
             value: [
               {
-                label: "2021",
+                label: "SEO",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
               },
               {
-                label: "2022",
+                label: "Social Media",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                label: "Branding",
+                type: "coa_level1",
+                value: [
+                  {
+                    label: "2021",
+                    type: "year",
+                    value: [
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Mar",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
@@ -407,1051 +2355,467 @@ export default [
             ],
           },
           {
-            label: "Leads",
+            label: "Finance",
+            type: "cc_level2",
             value: [
               {
-                label: "2021",
+                label: "RH",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
               },
               {
-                label: "2022",
+                label: "Accounting",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
+                    label: "2021",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                   {
-                    label: "Feb",
+                    label: "2022",
+                    type: "year",
                     value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Finance",
-        value: [
-          {
-            label: "Customer Success",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Retention",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],
               },
               {
-                label: "2022",
+                label: "Operations",
+                type: "coa_level1",
                 value: [
                   {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Leads",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "São Paulo",
-    value: [
-      {
-        label: "Sales",
-        value: [
-          {
-            label: "Customer Success",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Retention",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Leads",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Marketing",
-        value: [
-          {
-            label: "Customer Success",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Retention",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Leads",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Finance",
-        value: [
-          {
-            label: "Customer Success",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Retention",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Leads",
-            value: [
-              {
-                label: "2021",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                ],
-              },
-              {
-                label: "2022",
-                value: [
-                  {
-                    label: "Jan",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Feb",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "Mar",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
-                    ],
-                  },
-                  {
-                    label: "April",
-                    value: [
-                      { label: "Actual", value: "322,38" },
-                      { label: "Budget", value: "122,38" },
-                      { label: "Delta %", value: "60%" },
+                    label: "2021",
+                    type: "year",
+                    value: [
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                    ],
+                  },
+                  {
+                    label: "2022",
+                    type: "year",
+                    value: [
+                      {
+                        label: "Jan",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Feb",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "Mar",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
+                      {
+                        label: "April",
+                        type: "month",
+                        value: [
+                          {
+                            label: "Actual",
+                            type: "dimension",
+                            value: "322,38",
+                          },
+                          {
+                            label: "Budget",
+                            type: "dimension",
+                            value: "122,38",
+                          },
+                          { label: "Delta %", type: "dimension", value: "60%" },
+                        ],
+                      },
                     ],
                   },
                 ],

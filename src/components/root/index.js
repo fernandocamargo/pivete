@@ -1,66 +1,17 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
-import { property } from "lodash";
-import { useEffect, useMemo, useState } from "react";
-import styled from "styled-components";
+import use from "./hooks";
+import style from "./style";
 
-import { serialize } from "./helpers";
+export const renderColumn = () => {
+  return "Column";
+};
 
-export const enhance = (component) => styled(component)`
-  table {
-    border: dotted 1px red;
-    width: 100%;
-  }
+export const renderRow = () => {
+  return "Row";
+};
 
-  td,
-  th {
-    border: dotted 1px blue;
-  }
-
-  div {
-    display: flex;
-  }
-
-  pre {
-    font-size: 0.75rem;
-    width: 50%;
-  }
-`;
-
-export default enhance(({ className }) => {
-  const [[data], persist] = useState([[]]);
-  const formatted = useMemo(() => {
-    const indexes = { indexes: { fields: {}, values: {} } };
-    const parse = (stack, item, index) => {
-      const group = (stack, [name, value], _index) => {
-        const current = stack.indexes.values?.[name] || {};
-        const collection = current?.[value] || [];
-        const next = collection.concat(index);
-
-        return {
-          indexes: {
-            fields: Object.assign(stack.indexes.fields, { [name]: _index }),
-            values: Object.assign(stack.indexes.values, {
-              [name]: Object.assign(current, { [value]: next }),
-            }),
-          },
-        };
-      };
-
-      return Object.entries(item).reduce(group, stack);
-    };
-
-    return data.reduce(parse, indexes);
-  }, [data]);
-
-  useEffect(() => {
-    Promise.all([
-      window
-        .fetch("/assets/json/mock/data.json")
-        .then(serialize)
-        .then(property("data")),
-      import("./mock").then(property("default")),
-    ]).then(persist);
-  }, []);
+export default style(({ className }) => {
+  const { columns, data, formatted, rows, settings } = use();
 
   return data ? (
     <div className={className}>
@@ -72,7 +23,19 @@ export default enhance(({ className }) => {
       <table>
         <thead>
           <tr>
-            <th colSpan={3} rowSpan={4}>
+            <th colSpan={4} rowSpan={4}>
+              Rows
+            </th>
+            <th colSpan={24}>Columns</th>
+          </tr>
+          {columns.map(renderColumn)}
+        </thead>
+        <tbody>{rows.map(renderRow)}</tbody>
+      </table>
+      <table>
+        <thead>
+          <tr>
+            <th colSpan={4} rowSpan={4}>
               Rows
             </th>
             <th colSpan={24}>Columns</th>
@@ -120,9 +83,10 @@ export default enhance(({ className }) => {
         </thead>
         <tbody>
           <tr>
-            <td rowSpan={9}>Berlin</td>
-            <td rowSpan={3}>Sales</td>
-            <td>Customer Success</td>
+            <td rowSpan={18}>Office 2</td>
+            <td rowSpan={9}>General & Administrative</td>
+            <td rowSpan={3}>Finance, BI & Operations</td>
+            <td>Current assets</td>
             <td>322,380</td>
             <td>122,380</td>
             <td>60%</td>
@@ -367,9 +331,9 @@ export default enhance(({ className }) => {
             <td>60%</td>
           </tr>
           <tr>
-            <td rowSpan={9}>São Paulo</td>
+            <td rowSpan={9}>Product</td>
             <td rowSpan={3}>Sales</td>
-            <td>Customer Success</td>
+            <td>Current assets</td>
             <td>322,380</td>
             <td>122,380</td>
             <td>60%</td>
@@ -616,6 +580,7 @@ export default enhance(({ className }) => {
         </tbody>
       </table>
       <div>
+        <pre>{JSON.stringify(settings, null, 1)}</pre>
         <pre>{JSON.stringify(data, null, 1)}</pre>
         <pre>{JSON.stringify(formatted, null, 1)}</pre>
       </div>
