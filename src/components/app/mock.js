@@ -1,5 +1,92 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArray": true}] */
-export default [
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
+export default {
+  columns: [
+    {
+      content: "2021",
+      type: "year",
+      details: [
+        {
+          content: "Jan",
+          type: "month",
+          details: [
+            { content: "Actual", type: "itemtype" },
+            { content: "Budget", type: "itemtype" },
+            { content: "Actual vs. Budget", type: "itemtype" },
+          ],
+        },
+        {
+          content: "Fev",
+          type: "month",
+          details: [
+            { content: "Actual", type: "itemtype" },
+            { content: "Budget", type: "itemtype" },
+            { content: "Actual vs. Budget", type: "itemtype" },
+          ],
+        },
+      ],
+    },
+  ],
+  rows: [
+    {
+      content: "Office 1",
+      type: "office_id",
+      value: [
+        {
+          content: 1_000_000,
+          type: "year",
+          value: [
+            {
+              content: 500_000,
+              type: "month",
+              value: [
+                { content: 250_000, type: "itemtype" },
+                { content: 250_000, type: "itemtype" },
+                { content: "50%", type: "itemtype" },
+              ],
+            },
+            {
+              content: 500_000,
+              type: "month",
+              value: [
+                { content: 250_000, type: "itemtype" },
+                { content: 250_000, type: "itemtype" },
+                { content: "50%", type: "itemtype" },
+              ],
+            },
+          ],
+        },
+      ],
+      details: [
+        {
+          content: "Finance, BI & Operations",
+          type: "cc_level1",
+          value: [
+            {
+              content: 500_000,
+              type: "month",
+              value: [
+                { content: 250_000, type: "itemtype" },
+                { content: 250_000, type: "itemtype" },
+                { content: "50%", type: "itemtype" },
+              ],
+            },
+            {
+              content: 500_000,
+              type: "month",
+              value: [
+                { content: 250_000, type: "itemtype" },
+                { content: 250_000, type: "itemtype" },
+                { content: "50%", type: "itemtype" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export const fake = [
   {
     label: "Office 2",
     type: "office_id",
@@ -26,15 +113,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -43,15 +130,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -60,32 +147,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -100,15 +187,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -117,15 +204,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -134,32 +221,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -180,15 +267,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -197,15 +284,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -214,32 +301,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -254,15 +341,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -271,15 +358,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -288,32 +375,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -334,15 +421,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -351,15 +438,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -368,32 +455,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -408,15 +495,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -425,15 +512,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -442,32 +529,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -494,15 +581,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -511,15 +598,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -528,32 +615,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -568,15 +655,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -585,15 +672,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -602,32 +689,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -648,15 +735,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -665,15 +752,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -682,32 +769,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -722,15 +809,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -739,15 +826,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -756,32 +843,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -802,15 +889,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -819,15 +906,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -836,32 +923,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -876,15 +963,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -893,15 +980,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -910,32 +997,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -962,15 +1049,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -979,15 +1066,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -996,32 +1083,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1036,15 +1123,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1053,15 +1140,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1070,32 +1157,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1116,15 +1203,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1133,15 +1220,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1150,32 +1237,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1190,15 +1277,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1207,15 +1294,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1224,32 +1311,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1270,15 +1357,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1287,15 +1374,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1304,32 +1391,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1344,15 +1431,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1361,15 +1448,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1378,32 +1465,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1419,7 +1506,7 @@ export default [
         type: "cc_level1",
         value: [
           {
-            label: "Finance, BI & Operations",
+            label: "Sales",
             type: "cc_level2",
             value: [
               {
@@ -1436,15 +1523,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1453,15 +1540,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1470,32 +1557,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1510,15 +1597,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1527,15 +1614,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1544,32 +1631,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1590,15 +1677,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1607,15 +1694,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1624,32 +1711,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1664,15 +1751,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1681,15 +1768,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1698,32 +1785,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1744,15 +1831,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1761,15 +1848,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1778,32 +1865,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1818,15 +1905,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1835,15 +1922,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1852,32 +1939,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1887,7 +1974,7 @@ export default [
             ],
           },
           {
-            label: "Marketing",
+            label: "Legal",
             type: "cc_level2",
             value: [
               {
@@ -1904,15 +1991,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1921,15 +2008,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1938,32 +2025,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -1978,15 +2065,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -1995,15 +2082,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2012,32 +2099,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2058,15 +2145,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2075,15 +2162,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2092,32 +2179,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2132,15 +2219,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2149,15 +2236,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2166,32 +2253,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2212,15 +2299,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2229,15 +2316,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2246,32 +2333,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2286,15 +2373,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2303,15 +2390,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2320,32 +2407,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2355,7 +2442,7 @@ export default [
             ],
           },
           {
-            label: "Finance",
+            label: "Office Management",
             type: "cc_level2",
             value: [
               {
@@ -2372,15 +2459,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2389,15 +2476,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2406,32 +2493,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2446,15 +2533,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2463,15 +2550,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2480,32 +2567,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2526,15 +2613,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2543,15 +2630,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2560,32 +2647,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2600,15 +2687,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2617,15 +2704,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2634,32 +2721,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2680,15 +2767,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2697,15 +2784,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2714,32 +2801,32 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                     ],
@@ -2754,15 +2841,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2771,15 +2858,15 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
@@ -2788,32 +2875,36 @@ export default [
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          { label: "Delta %", type: "itemtype", value: "60%" },
                         ],
                       },
                       {
-                        label: "April",
+                        label: "Apr",
                         type: "month",
                         value: [
                           {
                             label: "Actual",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "322,38",
                           },
                           {
                             label: "Budget",
-                            type: "dimension",
+                            type: "itemtype",
                             value: "122,38",
                           },
-                          { label: "Delta %", type: "dimension", value: "60%" },
+                          {
+                            label: "Delta %",
+                            type: "itemtype",
+                            value: "60%",
+                          },
                         ],
                       },
                     ],
