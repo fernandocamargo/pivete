@@ -17,6 +17,10 @@ export default createGlobalStyle`
     width: 100%;
   }
 
+  thead {
+    background-color: #f4f0ec;
+  }
+
   td,
   th {
     border: solid 0.5px #333;

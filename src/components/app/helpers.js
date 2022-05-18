@@ -10,5 +10,3 @@ export const fetch = () =>
   ]);
 
 export const serialize = (response) => response.json();
-
-export const sum = (current) => (next) => current + next;

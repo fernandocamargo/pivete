@@ -36,7 +36,8 @@ export default ({ className }) => {
         </thead>
         <tbody>
           <tr>
-            <td colSpan={2}>Office 1</td>
+            <td>Office 1</td>
+            <td>Finance, BI & Operations</td>
             <td>250</td>
             <td>250</td>
             <td>50%</td>
