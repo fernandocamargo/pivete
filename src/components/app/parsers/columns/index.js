@@ -8,6 +8,7 @@ import { sum } from "helpers/number";
 
 export default class {
   constructor(settings) {
+    this.axis = "rows";
     this.settings = settings;
   }
 

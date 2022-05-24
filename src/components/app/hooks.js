@@ -6,7 +6,7 @@ import { Columns, Rows } from "./parsers";
 
 export default () => {
   const ref = useRef();
-  const [[state, records], persist] = useState([[], { columns: [], rows: [] }]);
+  const [records, persist] = useState({ columns: [], rows: [] });
   const [settings] = useState({
     columns: ["year", "month", "itemtype"],
     rows: ["office_id", "cc_level1"],
@@ -19,11 +19,14 @@ export default () => {
     [settings]
   );
   const recordset = useMemo(() => format(records), [format, records]);
-  const ready = useMemo(() => !!state.length, [state]);
+  const ready = useMemo(
+    () => !!records.columns.length || !!records.rows.length,
+    [records]
+  );
 
   useEffect(() => {
-    fetch().then(persist);
-  }, []);
+    fetch({ settings }).then(persist);
+  }, [settings]);
 
   return { ready, ref, settings, ...recordset };
 };

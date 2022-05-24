@@ -1,12 +1,4 @@
 import property from "lodash/property";
+import { post } from "axios";
 
-export const fetch = () =>
-  Promise.all([
-    window
-      .fetch("/assets/json/mock/data.json")
-      .then(serialize)
-      .then(property("data")),
-    import("./mock").then(property("default")),
-  ]);
-
-export const serialize = (response) => response.json();
+export const fetch = (params) => post("/", params).then(property("data"));
