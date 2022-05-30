@@ -9,7 +9,13 @@ export default () => {
   const [records, persist] = useState({ columns: [], rows: [] });
   const [settings] = useState({
     columns: ["year", "month", "itemtype"],
-    rows: ["office_id", "cc_level1"],
+    rows: [
+      "office_id",
+      "cc_level1",
+      "cc_level2",
+      "cc_level3",
+      "transaction_value",
+    ],
   });
   const format = useCallback(
     ({ columns, rows }) => ({

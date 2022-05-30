@@ -1,57 +1,72 @@
 import get from "lodash/get";
+import isEqual from "lodash/isEqual";
 import isFunction from "lodash/isFunction";
 import setWith from "lodash/setWith";
 import updateWith from "lodash/updateWith";
 
 export const apply = (source, [path, value]) => {
-  const method = isFunction(value) ? updateWith : setWith;
+  const handle = isFunction(value) ? updateWith : setWith;
 
-  return method(source, path, value, Object);
+  return handle(source, path, value, Object);
 };
 
-export const assign = (source, transformations) =>
+export const assign = (source, transformations = []) =>
   transformations.reduce(apply, source);
 
-export const process = ({ data, settings }) => {
+export const extract = ({ columns, rows }) => {
+  const last = rows.length - 1;
+  const fields = [].concat(rows.slice(0, last), columns, rows.slice(-1));
+  const validate = (type) => isEqual(type, rows[last]);
+
+  return { fields, validate };
+};
+
+export const process = ({ data, ...params }) => {
+  console.clear();
+  console.time("process");
+
+  const { validate, fields } = extract(params.settings);
   const scan = (input, record) => {
-    const iterate = (stack, type, index) => {
+    const iterate = (output, type, index) => {
       const { [type]: property } = record;
       const content = String(property).trim();
-      const prefix = { columns: !!index ? "details" : [] };
-      const folder = {
-        columns: stack.path.tree.columns.concat(prefix.columns),
-      };
-      const indexes = stack.path.indexes.concat(content);
-      const paths = {
-        indexes: {
-          columns: get(
-            stack.input,
-            indexes,
-            get(stack.input, folder.columns).length
-          ),
-        },
-      };
-      const tree = { columns: folder.columns.concat(paths.indexes.columns) };
-      const concat = (cache) => cache || { content, type, details: [] };
+      const restore = (cache) => cache || { content, type, details: [] };
+      const folder = output.path.tree.concat(!!index ? "details" : []);
+      const indexes = output.path.indexes.concat(content);
+      const { length } = get(output.input, folder);
+      const path = get(output.input, indexes, length);
+      const tree = folder.concat(path);
 
       return {
-        input: assign(stack.input, [
-          [indexes, paths.indexes.columns],
-          [tree.columns, concat],
+        input: assign(output.input, [
+          [indexes, path],
+          [tree, restore],
         ]),
         path: { indexes, tree },
       };
     };
 
-    return settings.columns.reduce(iterate, {
-      path: { indexes: ["indexes"], tree: { columns: ["tree", "columns"] } },
+    return fields.reduce(iterate, {
+      path: { indexes: ["indexes"], tree: ["tree"] },
       input,
     }).input;
   };
-  const response = data.reduce(scan, {
-    tree: { columns: [], rows: [] },
-    indexes: {},
-  });
+  const response = data.reduce(scan, { indexes: {}, tree: [] });
+  const calculate = (input, { content, type, ...node }) => {
+    const { details, value } = validate(type)
+      ? { value: Number(content) }
+      : node.details.reduce(calculate, { details: [], value: 0 });
+    const concat = (tree) => tree.concat({ content, details, type, value });
+    const increment = (total) => total + value;
 
-  return response.tree;
+    return assign(input, [
+      ["details", concat],
+      ["value", increment],
+    ]);
+  };
+  const summary = response.tree.reduce(calculate, { details: [], value: 0 });
+
+  console.timeEnd("process");
+
+  return summary;
 };
