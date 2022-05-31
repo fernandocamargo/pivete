@@ -38,7 +38,7 @@ export default class {
       const uuid = { origin: path.join(".") };
       const { nodes, tree } = scan(details || value, { depth, path }, reset());
       const increment = sum(Math.max(nodes, 1));
-      const concat = (fragments = []) =>
+      const concat = (fragments = [], extra) =>
         fragments.concat({
           content,
           depth,
@@ -47,6 +47,7 @@ export default class {
           ref,
           type,
           uuid,
+          ...extra,
         });
       const reconcile = () => {
         const {
@@ -55,7 +56,9 @@ export default class {
 
         switch (true) {
           case countable:
-            return update(tree, { [length]: { $unshift: concat() } });
+            return update(tree, {
+              [length]: { $unshift: concat([], { roledescription: "label" }) },
+            });
           case location.tail && !nodes && !parent && !index:
             return update(tree, { $push: [concat()] });
           case location.tail && !nodes:

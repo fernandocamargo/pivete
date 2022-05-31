@@ -181,5 +181,97 @@ export default {
         },
       ],
     },
+    {
+      content: "Office 3",
+      type: "office_id",
+      value: [
+        {
+          content: 19,
+          type: "year",
+          value: [
+            {
+              content: 20,
+              type: "month",
+              value: [
+                { content: 21, type: "itemtype" },
+                { content: 22, type: "itemtype" },
+                { content: "23%", type: "itemtype" },
+              ],
+            },
+            {
+              content: 24,
+              type: "month",
+              value: [
+                { content: 25, type: "itemtype" },
+                { content: 26, type: "itemtype" },
+                { content: "27%", type: "itemtype" },
+              ],
+            },
+          ],
+        },
+      ],
+      details: [
+        {
+          content: "Finance, BI & Operations",
+          type: "cc_level1",
+          value: [
+            {
+              content: 28,
+              type: "year",
+              value: [
+                {
+                  content: 29,
+                  type: "month",
+                  value: [
+                    { content: 30, type: "itemtype" },
+                    { content: 31, type: "itemtype" },
+                    { content: "32%", type: "itemtype" },
+                  ],
+                },
+                {
+                  content: 33,
+                  type: "month",
+                  value: [
+                    { content: 34, type: "itemtype" },
+                    { content: 35, type: "itemtype" },
+                    { content: "36%", type: "itemtype" },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          content: "Marketing",
+          type: "cc_level1",
+          value: [
+            {
+              content: 37,
+              type: "year",
+              value: [
+                {
+                  content: 38,
+                  type: "month",
+                  value: [
+                    { content: 39, type: "itemtype" },
+                    { content: 40, type: "itemtype" },
+                    { content: "41%", type: "itemtype" },
+                  ],
+                },
+                {
+                  content: 42,
+                  type: "month",
+                  value: [
+                    { content: 43, type: "itemtype" },
+                    { content: 44, type: "itemtype" },
+                    { content: "45%", type: "itemtype" },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 };

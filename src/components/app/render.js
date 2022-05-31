@@ -8,613 +8,131 @@ export default ({ className }) => {
 
   return ready ? (
     <div className={className}>
-      <Table ref={ref} settings={settings} {...table} />
-      <hr />
-      <table>
-        <thead>
-          <tr>
-            <th colSpan={2} rowSpan={4}>
-              Rows
-            </th>
-            <th colSpan={6}>Columns</th>
-          </tr>
-          <tr>
-            <th colSpan={6}>2021</th>
-          </tr>
-          <tr>
-            <th colSpan={3}>Jan</th>
-            <th colSpan={3}>Feb</th>
-          </tr>
-          <tr>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Actual vs. Budget</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Actual vs. Budget</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Office 1</td>
-            <td>Finance, BI & Operations</td>
-            <td>250</td>
-            <td>250</td>
-            <td>50%</td>
-            <td>250</td>
-            <td>250</td>
-            <td>50%</td>
-          </tr>
-          <tr>
-            <td rowSpan={2}>Office 2</td>
-            <td>Finance, BI & Operations</td>
-            <td>250</td>
-            <td>250</td>
-            <td>50%</td>
-            <td>250</td>
-            <td>250</td>
-            <td>50%</td>
-          </tr>
-          <tr>
-            <td>Marketing</td>
-            <td>250</td>
-            <td>250</td>
-            <td>50%</td>
-            <td>250</td>
-            <td>250</td>
-            <td>50%</td>
-          </tr>
-        </tbody>
-      </table>
-      <hr />
-      <table>
-        <thead>
-          <tr>
-            <th colSpan={4} rowSpan={4}>
-              Rows
-            </th>
-            <th colSpan={24}>Columns</th>
-          </tr>
-          <tr>
-            <th colSpan={12}>2021</th>
-            <th colSpan={12}>2022</th>
-          </tr>
-          <tr>
-            <th colSpan={3}>Jan</th>
-            <th colSpan={3}>Feb</th>
-            <th colSpan={3}>Mar</th>
-            <th colSpan={3}>Apr</th>
-            <th colSpan={3}>Jan</th>
-            <th colSpan={3}>Feb</th>
-            <th colSpan={3}>Mar</th>
-            <th colSpan={3}>Apr</th>
-          </tr>
-          <tr>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-            <th>Actual</th>
-            <th>Budget</th>
-            <th>Delta %</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowSpan={18}>Office 2</td>
-            <td rowSpan={9}>General & Administrative</td>
-            <td rowSpan={3}>Finance, BI & Operations</td>
-            <td>Current assets</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Retention</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Leads</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td rowSpan={3}>Marketing</td>
-            <td>SEO</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Social Media</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Branding</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td rowSpan={3}>Finance</td>
-            <td>RH</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Accounting</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Operations</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td rowSpan={9}>Product</td>
-            <td rowSpan={3}>Sales</td>
-            <td>Current assets</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Retention</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Leads</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td rowSpan={3}>Marketing</td>
-            <td>SEO</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Social Media</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Branding</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td rowSpan={3}>Finance</td>
-            <td>RH</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Accounting</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Operations</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-            <td>322,380</td>
-            <td>122,380</td>
-            <td>60%</td>
-          </tr>
-        </tbody>
-      </table>
-      <hr />
+      <header>
+        <h2>
+          <a href="/" title="Pectus Finance">
+            Pectus Finance
+          </a>
+          <span> proudly presents:</span>
+        </h2>
+        <nav>
+          <h4>Browse through:</h4>
+          <ul>
+            <li aria-roledescription="upload">
+              <a href="/" title="Data Upload">
+                Data Upload
+              </a>
+            </li>
+            <li aria-roledescription="controlling">
+              <a href="/" title="Controlling">
+                Controlling
+              </a>
+            </li>
+            <li aria-current="page" aria-roledescription="builder">
+              <a href="/" title="Report Builder">
+                Report Builder
+              </a>
+            </li>
+            <li aria-roledescription="workspaces">
+              <a href="/" title="Workspaces">
+                Workspaces
+              </a>
+            </li>
+            <li aria-roledescription="mappings">
+              <a href="/" title="Data Mapping">
+                Data Mapping
+              </a>
+            </li>
+            <li aria-roledescription="kpi">
+              <a href="/" title="KPI Builder">
+                KPI Builder
+              </a>
+            </li>
+            <li aria-roledescription="reports">
+              <a href="/" title="Reports">
+                Reports
+              </a>
+            </li>
+            <li aria-roledescription="settings">
+              <a href="/" title="Setttings">
+                Setttings
+              </a>
+              <ul>
+                <li aria-roledescription="notifications">
+                  <a href="/" title="See notifications">
+                    <abbr title="110">See notifications</abbr>
+                  </a>
+                </li>
+                <li aria-roledescription="profile">
+                  <a href="/" title="Profile">
+                    <abbr title="M">Profile</abbr>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <form>
+          <fieldset>
+            <legend>Search</legend>
+            <div>
+              <label htmlFor="keywords">Keywords</label>
+              <input
+                type="text"
+                id="keywords"
+                name="keywords"
+                placeholder="Search for keywords, workspaces etc. "
+              />
+            </div>
+          </fieldset>
+        </form>
+      </header>
+      <div role="main">
+        <section>
+          <h1>Report Builder</h1>
+          <p>
+            Select & add KPIs to the desired section of the report builder
+            table.
+          </p>
+          <nav>
+            <h4>Actions:</h4>
+            <ul>
+              <li aria-roledescription="settings">
+                <a href="/" title="Configure">
+                  Configure
+                </a>
+              </li>
+              <li aria-roledescription="chart">
+                <a href="/" title="Create chart">
+                  Create chart
+                </a>
+              </li>
+              <li aria-roledescription="create">
+                <a href="/" title="New table">
+                  New table
+                </a>
+              </li>
+              <li aria-roledescription="formula">
+                <a href="/" title="Formula">
+                  Formula
+                </a>
+              </li>
+              <li aria-roledescription="templates">
+                <a href="/" title="Templates">
+                  Templates
+                </a>
+              </li>
+              <li aria-roledescription="save">
+                <a href="/" title="Save">
+                  Save
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <Table ref={ref} settings={settings} {...table} />
+        </section>
+      </div>
+      <footer></footer>
     </div>
   ) : (
     "Loading..."

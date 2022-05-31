@@ -12,23 +12,28 @@ export const renderRows = (rows, index) => (
 );
 
 export default forwardRef(({ className, columns, rows, settings }, ref) => {
-  const rowSpan = useMemo(
-    () => settings.columns.length + 1,
-    [settings.columns]
+  const { colSpan, rowSpan } = useMemo(
+    () => ({
+      colSpan: settings.rows.length - 1,
+      rowSpan: settings.columns.length + 1,
+    }),
+    [settings]
   );
 
   return (
-    <table className={className} ref={ref}>
-      <thead>
-        <tr>
-          <th colSpan={settings.rows.length} rowSpan={rowSpan}>
-            Rows
-          </th>
-          <th colSpan={columns.nodes}>Columns</th>
-        </tr>
-        {columns.tree.map(renderRows)}
-      </thead>
-      <tbody>{rows.tree.map(renderRows)}</tbody>
-    </table>
+    <div className={className} ref={ref}>
+      <table>
+        <thead>
+          <tr>
+            <th colSpan={colSpan} rowSpan={rowSpan}>
+              Rows
+            </th>
+            <th colSpan={columns.nodes}>Columns</th>
+          </tr>
+          {columns.tree.map(renderRows)}
+        </thead>
+        <tbody>{rows.tree.map(renderRows)}</tbody>
+      </table>
+    </div>
   );
 });

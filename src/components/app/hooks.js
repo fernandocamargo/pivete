@@ -1,21 +1,17 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+import state from "./mock";
 import { fetch } from "./helpers";
 import { Columns, Rows } from "./parsers";
 
 export default () => {
   const ref = useRef();
-  const [records, persist] = useState({ columns: [], rows: [] });
+  // const [records, persist] = useState({ columns: [], rows: [] });
+  const [records] = useState(state);
   const [settings] = useState({
     columns: ["year", "month", "itemtype"],
-    rows: [
-      "office_id",
-      "cc_level1",
-      "cc_level2",
-      "cc_level3",
-      "transaction_value",
-    ],
+    rows: ["office_id", "cc_level1", "transaction_value"],
   });
   const format = useCallback(
     ({ columns, rows }) => ({
@@ -31,7 +27,8 @@ export default () => {
   );
 
   useEffect(() => {
-    fetch({ settings }).then(persist);
+    // fetch({ settings }).then(persist);
+    fetch({ settings });
   }, [settings]);
 
   return { ready, ref, settings, ...recordset };
