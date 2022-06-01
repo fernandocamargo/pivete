@@ -7,7 +7,7 @@ import Header from "./header";
 import Settings from "./settings";
 
 export default ({ className }) => {
-  const { Container: Modal, ...modal } = useModal({ open: true });
+  const { Container: Modal, ...modal } = useModal();
   const { close, configure, ready, ref, settings, ...table } = use({ modal });
 
   return ready ? (

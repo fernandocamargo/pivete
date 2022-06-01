@@ -15,8 +15,14 @@ import * as reducers from "./reducers";
 export default (settings = { open: false }) => {
   const ref = useRef();
   const [state, set] = useState(settings);
-  const close = useCallback(() => set(reducers.close()), []);
-  const open = useCallback(() => set(reducers.open()), []);
+  const close = useCallback(
+    () => !!state.open && set(reducers.close()),
+    [state.open]
+  );
+  const open = useCallback(
+    () => !state.open && set(reducers.open()),
+    [state.open]
+  );
   const click = useCallback(
     ({ target }) => {
       const closeable =
