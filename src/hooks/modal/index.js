@@ -1,6 +1,12 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import isEqual from "lodash/isEqual";
-import { createElement, useCallback, useRef, useState } from "react";
+import {
+  cloneElement,
+  createElement,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 
 import { Modal } from "components/widgets";
 
@@ -20,10 +26,18 @@ export default (settings = { open: false }) => {
     },
     [close]
   );
+  const connect = useCallback(
+    ({ children, ...props }) => ({
+      children: cloneElement(children, { ref }),
+      onClick: click,
+      ...props,
+    }),
+    [click]
+  );
   const Container = useCallback(
-    (props) => state.open && createElement(Modal, { onClick: click, ...props }),
-    [state.open, click]
+    (props) => state.open && createElement(Modal, connect(props)),
+    [state.open, connect]
   );
 
-  return { Container, close, open, ref };
+  return { Container, close, open };
 };

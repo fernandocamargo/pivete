@@ -1,15 +1,11 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import { useCallback } from "react";
 
-export default () => {
+export default (props) => {
   const close = useCallback(
-    (event) => [event.preventDefault(), console.log("close();")],
-    []
-  );
-  const create = useCallback(
-    (event) => [event.preventDefault(), console.log("create();")],
-    []
+    (event) => [event.preventDefault(), props.close()],
+    [props]
   );
 
-  return { close, create };
+  return { close };
 };

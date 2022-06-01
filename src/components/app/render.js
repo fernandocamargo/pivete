@@ -1,6 +1,4 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
-import { useCallback } from "react";
-
 import { useModal } from "hooks";
 import { Table } from "components/widgets";
 
@@ -9,12 +7,8 @@ import Header from "./header";
 import Settings from "./settings";
 
 export default ({ className }) => {
-  const { ready, ref, settings, ...table } = use();
-  const { Container: Modal, open, ...modal } = useModal({ open: true });
-  const configure = useCallback(
-    (event) => [event.preventDefault(), open()],
-    [open]
-  );
+  const { Container: Modal, ...modal } = useModal({ open: true });
+  const { close, configure, ready, ref, settings, ...table } = use({ modal });
 
   return ready ? (
     <div className={className}>
@@ -64,7 +58,7 @@ export default ({ className }) => {
           <article>
             <Table ref={ref} settings={settings} {...table} />
             <Modal>
-              <Settings ref={modal.ref} {...settings} />
+              <Settings close={close} {...settings} />
             </Modal>
           </article>
         </section>

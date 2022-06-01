@@ -8,11 +8,11 @@ export default ({ onClick: click }) =>
   useEffect(() => {
     const press = (event) => isEqual(event.keyCode, ESC) && click(event);
 
-    // document.addEventListener("click", click, false);
+    document.addEventListener("click", click, false);
     document.addEventListener("keydown", press, false);
 
     return () => [
-      // document.removeEventListener("click", click, false),
+      document.removeEventListener("click", click, false),
       document.removeEventListener("keydown", press, false),
     ];
   }, [click]);

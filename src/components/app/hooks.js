@@ -5,7 +5,7 @@ import state from "./mock";
 import { fetch } from "./helpers";
 import { Columns, Rows } from "./parsers";
 
-export default () => {
+export default ({ modal: { open, close } }) => {
   const ref = useRef();
   // const [records, persist] = useState({ columns: [], rows: [] });
   const [records] = useState(state);
@@ -25,9 +25,13 @@ export default () => {
     () => !!records.columns.length || !!records.rows.length,
     [records]
   );
+  const configure = useCallback(
+    (event) => [event.preventDefault(), open()],
+    [open]
+  );
 
   // fetch({ settings }).then(persist);
   useEffect(() => void fetch({ settings }), [settings]);
 
-  return { ready, ref, settings, ...recordset };
+  return { close, configure, open, ready, ref, settings, ...recordset };
 };
