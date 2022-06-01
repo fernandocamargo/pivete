@@ -11,7 +11,7 @@ export default () => {
   const [records] = useState(state);
   const [settings] = useState({
     columns: ["year", "month", "itemtype"],
-    rows: ["office_id", "cc_level1", "transaction_value"],
+    rows: ["cc_level1", "office_id", "transaction_value"],
   });
   const format = useCallback(
     ({ columns, rows }) => ({
@@ -26,10 +26,8 @@ export default () => {
     [records]
   );
 
-  useEffect(() => {
-    // fetch({ settings }).then(persist);
-    fetch({ settings });
-  }, [settings]);
+  // fetch({ settings }).then(persist);
+  useEffect(() => void fetch({ settings }), [settings]);
 
   return { ready, ref, settings, ...recordset };
 };
