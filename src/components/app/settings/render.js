@@ -3,8 +3,12 @@ import { forwardRef } from "react";
 import use from "./hooks";
 import Property from "./property";
 
+export const renderProperty = (property) => (
+  <Property key={property.type} {...property} />
+);
+
 export default forwardRef(({ className, ...props }, ref) => {
-  const { close } = use(props);
+  const { close, properties } = use(props);
 
   return (
     <div className={className} ref={ref}>
@@ -19,11 +23,7 @@ export default forwardRef(({ className, ...props }, ref) => {
           </li>
         </ul>
       </nav>
-      <blockquote>
-        <Property label="Rows" />
-        <Property label="Columns" />
-        <Property label="Values" />
-      </blockquote>
+      <blockquote>{properties.map(renderProperty)}</blockquote>
     </div>
   );
 });

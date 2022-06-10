@@ -2,6 +2,8 @@
 import styled from "styled-components";
 
 export default (component) => styled(component)`
+  cursor: ${({ details }) => (!!details.length ? "default" : "not-allowed")};
+  opacity: ${({ details }) => (!!details.length ? 1 : 0.5)};
   position: relative;
 
   dt {

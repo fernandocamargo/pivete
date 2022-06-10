@@ -2,28 +2,33 @@
 import { useModal } from "hooks";
 
 import use from "./hooks";
+import Value from "./value";
 
-export default ({ className, label, ...props }) => {
+export default ({ className, content, details }) => {
   const { Container: Modal, ...modal } = useModal();
-  const { create } = use({ modal, ...props });
+  const { create } = use({ modal });
 
   return (
     <dl className={className}>
-      <dt>{label}</dt>
+      <dt>{content}</dt>
       <dd>
-        <nav>
-          <h4>Actions:</h4>
-          <ul>
-            <li>
-              <a href="/" title="Add new item" onClick={create}>
-                Add new item
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <Modal>
-          <p>This is the next modal</p>
-        </Modal>
+        {!!details.length && (
+          <>
+            <nav>
+              <h4>Actions:</h4>
+              <ul>
+                <li>
+                  <a href="/" title="Add new item" onClick={create}>
+                    Add new item
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <Modal>
+              <Value details={details} />
+            </Modal>
+          </>
+        )}
       </dd>
     </dl>
   );
