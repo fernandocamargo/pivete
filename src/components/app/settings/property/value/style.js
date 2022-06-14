@@ -61,8 +61,6 @@ export default (component) => styled(component)`
 
   & > details,
   summary + details {
-    margin-top: 16px;
-
     & > {
       details {
         margin-left: 16px;

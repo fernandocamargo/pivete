@@ -4,7 +4,7 @@ import use from "./hooks";
 import Property from "./property";
 
 export const renderProperty = (property) => (
-  <Property key={property.type} {...property} />
+  <Property key={property.uuid} {...property} />
 );
 
 export default forwardRef(({ className, ...props }, ref) => {
@@ -23,7 +23,9 @@ export default forwardRef(({ className, ...props }, ref) => {
           </li>
         </ul>
       </nav>
-      <blockquote>{properties.map(renderProperty)}</blockquote>
+      <blockquote>
+        <form>{properties.map(renderProperty)}</form>
+      </blockquote>
     </div>
   );
 });
