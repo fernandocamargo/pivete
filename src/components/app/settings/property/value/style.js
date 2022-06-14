@@ -1,6 +1,8 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import styled from "styled-components";
 
+import { Checkbox } from "components/widgets/fields";
+
 export default (component) => styled(component)`
   background: #fff;
   border: 0.5px solid #f1f3f5;
@@ -83,12 +85,6 @@ export default (component) => styled(component)`
     display: flex;
   }
 
-  form {
-    display: block;
-    margin-top: 5px;
-    position: relative;
-  }
-
   legend {
     display: flex;
     width: 100%;
@@ -109,19 +105,20 @@ export default (component) => styled(component)`
               url(${process.env
                 .PUBLIC_URL}/assets/svg/icons/report-builder/settings/property/value/actions/toggle.svg)
               no-repeat;
+            bottom: calc(100% + 6px);
             display: block;
             height: 18px;
-            left: 11px;
+            left: 12px;
             overflow: hidden;
             position: absolute;
             text-indent: -9999px;
             transition: transform 0.15s ease-in-out;
-            top: 7px;
             width: 18px;
+            z-index: 1;
           }
         }
 
-        label {
+        ${Checkbox} {
           margin: 5px 0 0 28px;
           width: calc(100% - 28px);
 
@@ -133,77 +130,4 @@ export default (component) => styled(component)`
       }
     }
   }
-
-  label {
-    color: #405261;
-    cursor: pointer;
-    display: flex;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    position: relative;
-    width: 100%;
-
-    input {
-      opacity: 0;
-      position: absolute;
-
-      &:focus {
-        & + span {
-          border-color: #b7babc;
-        }
-      }
-
-      &:checked {
-        & + span {
-          border-color: #3084f2;
-        }
-      }
-
-      &:checked {
-        & + span {
-          &:before {
-            background-image: url(${process.env
-              .PUBLIC_URL}/assets/svg/icons/form/checkbox/checked.svg);
-          }
-        }
-      }
-    }
-
-    span {
-      align-items: center;
-      border: 0.5px solid #e5e9ec;
-      border-radius: 4px;
-      display: flex;
-      padding: 7px 13.5px 7px 34.5px;
-      width: calc(100% - 48px);
-
-      &:hover {
-        border-color: #3084f2;
-      }
-
-      &:before {
-        background: center
-          url(${process.env
-            .PUBLIC_URL}/assets/svg/icons/form/checkbox/default.svg)
-          no-repeat;
-        content: "";
-        display: flex;
-        height: 15px;
-        margin-right: 7px;
-        width: 15px;
-      }
-    }
-  }
 `;
-
-/*
-      background: 12.5px center
-        url(${process.env
-          .PUBLIC_URL}/assets/svg/icons/forms/checkbox/default.svg)
-        no-repeat;
-
-          background-image: url(${process.env
-            .PUBLIC_URL}/assets/svg/icons/forms/checkbox/checked.svg);
-*/

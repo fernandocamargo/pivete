@@ -21,7 +21,6 @@ export default ({ modal: { open, close } }) => {
           type: "cc_level1",
           value: [{ value: "CEO" }],
         },
-        { type: "cc_level2", value: [] },
         { type: "cc_level3", value: [{ value: "4310 Mgmt Customer Success" }] },
         { type: "month", value: [{ value: "02" }, { value: "03" }] },
       ],
