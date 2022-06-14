@@ -408,7 +408,7 @@ export default ({ className }) => {
             </ul>
           </nav>
           <article>
-            <pre>{JSON.stringify(settings, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(settings, null, 2)}</pre> */}
             <Modal>
               <Settings
                 close={close}
