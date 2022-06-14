@@ -11,10 +11,7 @@ export default ({ modal: { open, close } }) => {
   const [{ records, settings }, set] = useState({
     records: { columns: [], rows: [] },
     settings: {
-      columns: [
-        { type: "year", value: [] },
-        { type: "month", value: [{ value: "02" }, { value: "03" }] },
-      ],
+      columns: [{ type: "year", value: [] }],
       rows: [
         {
           type: "office_id",
@@ -25,6 +22,8 @@ export default ({ modal: { open, close } }) => {
           value: [{ value: "CEO" }],
         },
         { type: "cc_level2", value: [] },
+        { type: "cc_level3", value: [{ value: "4310 Mgmt Customer Success" }] },
+        { type: "month", value: [{ value: "02" }, { value: "03" }] },
       ],
       values: [
         {

@@ -1,21 +1,23 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
+import find from "lodash/find";
 import isArray from "lodash/isArray";
+import isPlainObject from "lodash/isPlainObject";
 import { useCallback, useMemo } from "react";
 
 export const concat = ({ indexes, value }, fragment) => ({
   path: { indexes: indexes.concat(fragment), value },
 });
 
+export const verify = (stack, criteria) =>
+  isPlainObject(criteria) ? find(stack, criteria) : stack?.[criteria];
+
 export default ({ settings, toggle, ...props }) => {
   const validate = useCallback(
     (...fragments) => {
-      const path = [].concat(...fragments);
-      const scan = (stack) => stack;
-      const report = path.reduce(scan, { collection: settings, status: false });
+      const [axis, type, value] = [].concat(...fragments);
+      const path = [axis, { type }, "value", { value }];
 
-      console.log(path);
-
-      return report.status;
+      return !!path.reduce(verify, settings);
     },
     [settings]
   );
