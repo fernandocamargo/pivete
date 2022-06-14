@@ -330,28 +330,28 @@ export default ({ className }) => {
             content: "Item type",
             type: "itemtype",
             value: [
-              { content: "Actual", value: "actual" },
-              { content: "Forecast", value: "forecast" },
-              { content: "Budget", value: "budget" },
+              { content: "Actual", value: "Actual" },
+              { content: "Forecast", value: "Forecast" },
+              { content: "Budget", value: "Budget" },
               {
                 content: "Actual vs. Budget",
                 value: [
-                  { content: "Delta (%)", value: "actual / budget" },
-                  { content: "Delta (absolute)", value: "actual / budget" },
+                  { content: "Delta (%)", value: "Actual / Budget" },
+                  { content: "Delta (absolute)", value: "Actual / Budget" },
                 ],
               },
               {
                 content: "Actual vs. Forecast",
                 value: [
-                  { content: "Delta (%)", value: "actual / forecast" },
-                  { content: "Delta (absolute)", value: "actual / forecast" },
+                  { content: "Delta (%)", value: "Actual / Forecast" },
+                  { content: "Delta (absolute)", value: "Actual / Forecast" },
                 ],
               },
               {
                 content: "Forecast vs. Budget",
                 value: [
-                  { content: "Delta (%)", value: "forecast / budget" },
-                  { content: "Delta (absolute)", value: "forecast / budget" },
+                  { content: "Delta (%)", value: "Forecast / Budget" },
+                  { content: "Delta (absolute)", value: "Forecast / Budget" },
                 ],
               },
             ],
