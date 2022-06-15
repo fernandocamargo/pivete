@@ -1,23 +1,18 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
-import find from "lodash/find";
 import isArray from "lodash/isArray";
-import isPlainObject from "lodash/isPlainObject";
 import { useCallback, useMemo } from "react";
 
-export const concat = ({ indexes, value }, fragment) => ({
-  path: { indexes: indexes.concat(fragment), value },
-});
-
-export const verify = (stack, criteria) =>
-  isPlainObject(criteria) ? find(stack, criteria) : stack?.[criteria];
+import { concat, verify } from "./helpers";
 
 export default ({ settings, toggle, ...props }) => {
   const validate = useCallback(
-    (...fragments) => {
-      const [axis, type, value] = [].concat(...fragments);
-      const path = [axis, { type }, "value", { value }];
+    (params) => {
+      const [axis, type, value] = [].concat(params.path).concat(params.value);
+      const path = [axis, { type }].concat(
+        params.hasOwnProperty("value") ? ["value", { value }] : []
+      );
 
-      return !!path.reduce(verify, settings);
+      return path.reduce(verify, settings);
     },
     [settings]
   );
@@ -27,9 +22,9 @@ export default ({ settings, toggle, ...props }) => {
         case !item.hasOwnProperty("value"):
           return false;
         case isArray(item.value):
-          return !!item.value.length;
+          return !!validate({ path: path.value });
         default:
-          return validate(path.value, item.value);
+          return !!validate({ path: path.value, value: item.value });
       }
     },
     [validate]

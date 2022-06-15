@@ -11,7 +11,7 @@ export default (component) => styled(component)`
   padding: 9px 25px 25px 25px;
   position: absolute;
   right: 0;
-  top: 100%;
+  top: calc(100% + 11px);
   width: 229px;
   z-index: 1;
 

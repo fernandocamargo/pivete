@@ -42,7 +42,7 @@ export default (component) => styled(component)`
     blockquote {
       ${Property} {
         &:not(:first-of-type) {
-          margin-top: 100px;
+          margin-top: 17px;
         }
       }
     }
