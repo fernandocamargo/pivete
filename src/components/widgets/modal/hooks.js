@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import isEqual from "lodash/isEqual";
 import { useEffect } from "react";
 

@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import data from "./mock";

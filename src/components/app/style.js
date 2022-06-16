@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import property from "lodash/property";
 import styled from "styled-components";
 

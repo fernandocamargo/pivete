@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default ({ className, content }) => (
   <dl className={className}>
     <dt>{content}</dt>

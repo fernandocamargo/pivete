@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import { useModal } from "hooks";
 
 import use from "./hooks";

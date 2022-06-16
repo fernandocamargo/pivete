@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import { forwardRef } from "react";
 
 import Details from "./details";

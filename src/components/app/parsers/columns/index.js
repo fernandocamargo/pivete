@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowAnonymousClass": true}] */
 import isArray from "lodash/isArray";
 import isEqual from "lodash/isEqual";
 import update from "immutability-helper";

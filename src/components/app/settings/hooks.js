@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import isArray from "lodash/isArray";
 import { useCallback, useMemo } from "react";
 

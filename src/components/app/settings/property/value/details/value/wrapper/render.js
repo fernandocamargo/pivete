@@ -1,4 +1,3 @@
-/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import { Checkbox } from "components/widgets/fields";
 
 import { renderValue } from "../render";
