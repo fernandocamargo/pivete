@@ -83,6 +83,7 @@ export default (component) => styled(component)`
   summary {
     cursor: pointer;
     display: flex;
+    user-select: none;
   }
 
   legend {
@@ -119,8 +120,8 @@ export default (component) => styled(component)`
         }
 
         ${Checkbox} {
-          margin: 5px 0 0 28px;
-          width: calc(100% - 28px);
+          margin: 5px 14px 0 28px;
+          width: calc(100% - 42px);
 
           span {
             padding: 7px 13.5px;
