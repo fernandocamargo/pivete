@@ -1,5 +1,6 @@
 export const defaultProps = {
   details: [],
+  open: false,
   value: [],
 };
 
