@@ -5,6 +5,10 @@ import { useCallback, useMemo } from "react";
 import { concat, verify } from "./helpers";
 
 export default ({ settings, toggle, ...props }) => {
+  const translate = useCallback(
+    (value) => ({ null: "Not known" }[value] || value),
+    []
+  );
   const validate = useCallback(
     (params) => {
       const [axis, type, value] = [].concat(params.path).concat(params.value);
@@ -32,7 +36,8 @@ export default ({ settings, toggle, ...props }) => {
   const iterate = useCallback(
     (object, inheritance = { path: { indexes: [], value: [] } }) => {
       const transform = (item, index) => {
-        const { content, type } = item;
+        const { type } = item;
+        const content = translate(item.content);
         const path = {
           indexes: inheritance.path.indexes.concat(index),
           value: inheritance.path.value.concat(type || []),
@@ -53,7 +58,7 @@ export default ({ settings, toggle, ...props }) => {
 
       return isArray(object) ? object.map(transform) : object;
     },
-    [check, toggle]
+    [check, toggle, translate]
   );
   const properties = useMemo(
     () => iterate(props.properties),
