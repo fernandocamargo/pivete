@@ -1,7 +1,7 @@
 import { useModal } from "hooks";
 
 import use from "./hooks";
-import Item from "./item";
+// import Item from "./item";
 import Value from "./value";
 
 export default ({ className, ...props }) => {
@@ -27,10 +27,12 @@ export default ({ className, ...props }) => {
             </Modal>
           </nav>
         )}
+        {/*
         <Item content="Office ID" />
         <Item content="CC Level 1" />
         <Item content="CC Level 3" />
         <Item content="Month" />
+        */}
       </dd>
     </dl>
   );

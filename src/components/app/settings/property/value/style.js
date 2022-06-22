@@ -51,9 +51,9 @@ export default (component) => styled(component)`
       &:not(:first-of-type) {
         & > {
           summary {
-            filter: grayscale(1);
-            opacity: 0.5;
-            pointer-events: none;
+            // filter: grayscale(1);
+            // opacity: 0.5;
+            // pointer-events: none;
           }
         }
       }

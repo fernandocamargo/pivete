@@ -1,6 +1,5 @@
 export const defaultProps = {
-  details: [],
-  value: [],
+  open: false,
 };
 
 export const propTypes = {};

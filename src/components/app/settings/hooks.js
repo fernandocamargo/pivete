@@ -1,66 +1,85 @@
 import isArray from "lodash/isArray";
 import { useCallback, useMemo } from "react";
 
-import { concat, verify } from "./helpers";
+import { concat, get, verify } from "./helpers";
 
 export default ({ settings, toggle, ...props }) => {
   const translate = useCallback(
-    (value) => ({ null: "Not known" }[value] || value),
+    (value) => ({ null: "Unknown", "": "Unknown" }[value] || value),
     []
   );
-  const validate = useCallback(
+  const check = useCallback(
     (params) => {
+      const deep = params.hasOwnProperty("value");
       const [axis, type, value] = [].concat(params.path).concat(params.value);
-      const path = [axis, { type }].concat(
-        params.hasOwnProperty("value") ? ["value", { value }] : []
-      );
+      const path = [axis, { type }].concat(deep ? ["value", [{ value }]] : []);
 
-      return path.reduce(verify, settings);
+      return !!path.reduce(verify, settings);
     },
     [settings]
   );
-  const check = useCallback(
-    ({ item, path }) => {
-      switch (true) {
-        case !item.hasOwnProperty("value"):
-          return false;
-        case isArray(item.value):
-          return !!validate({ path: path.value });
-        default:
-          return !!validate({ path: path.value, value: item.value });
-      }
-    },
-    [validate]
-  );
   const iterate = useCallback(
-    (object, inheritance = { path: { indexes: [], value: [] } }) => {
-      const transform = (item, index) => {
-        const { type } = item;
-        const content = translate(item.content);
+    (
+      object,
+      inheritance = { path: { indexes: [], value: [] }, parent: null }
+    ) => {
+      const fill = (items = []) => ({ checked: false, items });
+      const transform = (stack, current, index) => {
+        const content = translate(current.content);
         const path = {
           indexes: inheritance.path.indexes.concat(index),
-          value: inheritance.path.value.concat(type || []),
-        };
-        const reconcile = (node) => {
-          const { [node]: field } = item;
-
-          return field && iterate(field, concat(path, node));
+          value: inheritance.path.value.concat(current.type || []),
         };
         const uuid = path.indexes.join(".");
-        const details = reconcile("details");
-        const value = reconcile("value");
-        const checked = check({ item, path });
-        const onChange = () => toggle({ item, path });
+        const details = iterate(
+          current.details,
+          concat({ parent: current, path }, "details")
+        );
+        const value = iterate(
+          current.value,
+          concat({ parent: current, path }, "value")
+        );
+        const checked =
+          check({ path: path.value, value: current.value }) || value.checked;
+        const inherit = (item) => ({
+          content: inheritance.parent.content,
+          type: inheritance.parent.type,
+          value: [item],
+        });
+        const resolve = () => {
+          switch (true) {
+            case !!current.type:
+              return [inheritance.path.value, get(current)];
+            case !isArray(current.value):
+              return [path.value, inherit(current)];
+            default:
+              return [path.value, get(current.value)];
+          }
+        };
+        const onChange = () => {
+          const [target, source] = resolve();
 
-        return { checked, content, details, onChange, uuid, value };
+          return toggle({ path: target, value: source, checked });
+        };
+        const next = {
+          details: details.items,
+          value: value.items,
+          checked,
+          content,
+          onChange,
+          uuid,
+        };
+        const items = stack.items.concat(next);
+
+        return { checked: stack.checked || checked, items };
       };
 
-      return isArray(object) ? object.map(transform) : object;
+      return isArray(object) ? object.reduce(transform, fill()) : fill(object);
     },
     [check, toggle, translate]
   );
   const properties = useMemo(
-    () => iterate(props.properties),
+    () => iterate(props.properties).items,
     [props.properties, iterate]
   );
   const close = useCallback(

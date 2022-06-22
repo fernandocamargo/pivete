@@ -1,3 +1,4 @@
+import { Details } from "components/widgets";
 import { Checkbox } from "components/widgets/fields";
 
 import { renderValue } from "../render";
@@ -9,11 +10,10 @@ export default ({ children, className, ...props }) => {
   return nested ? (
     <fieldset className={className}>
       <legend>{children}</legend>
-      <details>
-        <summary>See details</summary>
+      <Details summary="See details">
         <Checkbox>All</Checkbox>
         {value.map(renderValue)}
-      </details>
+      </Details>
     </fieldset>
   ) : (
     children

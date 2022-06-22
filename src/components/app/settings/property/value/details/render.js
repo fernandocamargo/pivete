@@ -1,14 +1,15 @@
-import Details from ".";
+import { Details } from "components/widgets";
+
+import Self from ".";
 import { renderValue } from "./value/render";
 
 export const renderDetails = (details, index) => (
-  <Details key={index} {...details} />
+  <Self key={index} {...details} />
 );
 
-export default ({ content, details, open, value }) => (
-  <details open={open}>
-    <summary>{content}</summary>
+export default ({ content, details, value }) => (
+  <Details summary={content}>
     {details.map(renderDetails)}
     {value.map(renderValue)}
-  </details>
+  </Details>
 );

@@ -8,7 +8,7 @@ import Header from "./header";
 import Settings from "./settings";
 
 export default ({ className }) => {
-  const { Container: Modal, ...modal } = useModal();
+  const { Container: Modal, ...modal } = useModal({ open: true });
   // const { close, configure, empty, ref, settings, ...table } = use({ modal });
   const { close, configure, settings, toggle } = use({ modal });
   const properties = useMemo(
@@ -19,140 +19,54 @@ export default ({ className }) => {
         details: [
           {
             content: "Accounting data",
-            details: [
+            value: [
               {
-                content: "Dimensions",
+                content: "Office ID",
+                type: "office_id",
                 value: [
                   {
-                    content: "Office ID",
-                    type: "office_id",
-                    value: [
-                      {
-                        content: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
-                        value: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
-                      },
-                    ],
+                    content: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
+                    value: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
                   },
-                  {
-                    content: "Account",
-                    type: "account",
-                    value: [
-                      {
-                        content: "6770 Verkaufsprovisionen",
-                        value: "6770 Verkaufsprovisionen",
-                      },
-                      {
-                        content: "5904 sonstige Gebühren / Registergebühren",
-                        value: "5904 sonstige Gebühren / Registergebühren",
-                      },
-                      {
-                        content: "6600 Werbekosten",
-                        value: "6600 Werbekosten",
-                      },
-                      {
-                        content: "5903 Lagerkosten",
-                        value: "5903 Lagerkosten",
-                      },
-                      {
-                        content: "6663 Reisekosten Arbeitnehmer, Fahrtkosten",
-                        value: "6663 Reisekosten Arbeitnehmer, Fahrtkosten",
-                      },
-                      {
-                        content: "6837 Aufwendungen für Lizenzen, Konzessionen",
-                        value: "6837 Aufwendungen für Lizenzen, Konzessionen",
-                      },
-                      { content: "6010 Löhne", value: "6010 Löhne" },
-                      {
-                        content: "6495 Wartungskosten für Hard- und Software",
-                        value: "6495 Wartungskosten für Hard- und Software",
-                      },
-                      {
-                        content: "6640 Bewirtungskosten",
-                        value: "6640 Bewirtungskosten",
-                      },
-                      {
-                        content: "4836 Erlöse Verkäufe Amazon Verwertung 19%",
-                        value: "4836 Erlöse Verkäufe Amazon Verwertung 19%",
-                      },
-                      {
-                        content:
-                          "6130 Freiwillige soziale Aufwendung. LSt-frei",
-                        value: "6130 Freiwillige soziale Aufwendung. LSt-frei",
-                      },
-                      { content: "6805 Telefon", value: "6805 Telefon" },
-                      {
-                        content: "5902 Zinsaufwendungen DHB Bank",
-                        value: "5902 Zinsaufwendungen DHB Bank",
-                      },
-                      {
-                        content: "6110 Gesetzliche Sozialaufwendungen",
-                        value: "6110 Gesetzliche Sozialaufwendungen",
-                      },
-                      {
-                        content: "6304 Sonstige betriebl.u.regelm.Aufwendungen",
-                        value: "6304 Sonstige betriebl.u.regelm.Aufwendungen",
-                      },
-                      {
-                        content: "4401 Erlöse 19% USt",
-                        value: "4401 Erlöse 19% USt",
-                      },
-                      { content: "6020 Gehälter", value: "6020 Gehälter" },
-                    ],
-                  },
+                ],
+              },
+              {
+                content: "Cost Center Levels",
+                value: [
                   {
                     content: "CC Level 1",
                     type: "cc_level1",
-                    value: [{ content: "CEO", value: "CEO" }],
+                    value: [
+                      {
+                        content: "General & Administrative",
+                        value: "General & Administrative",
+                      },
+                      {
+                        content: "Sales & Marketing",
+                        value: "Sales & Marketing",
+                      },
+                      { content: "Unmapped", value: "Unmapped" },
+                      {
+                        content: "Product & Engineering",
+                        value: "Product & Engineering",
+                      },
+                      { content: "Gross Profit", value: "Gross Profit" },
+                      { content: "CEO", value: "CEO" },
+                    ],
                   },
                   {
                     content: "CC Level 2",
                     type: "cc_level2",
                     value: [
-                      {
-                        content: "Customer Success",
-                        value: "Customer Success",
-                      },
-                      { content: "CEO Office", value: "CEO Office" },
-                      { content: "Marketing", value: "Marketing" },
-                      { content: null, value: null },
-                      {
-                        content: "Cost of Service (COGS)",
-                        value: "Cost of Service (COGS)",
-                      },
-                      {
-                        content: "People & Organization",
-                        value: "People & Organization",
-                      },
-                      { content: "Revenue", value: "Revenue" },
-                      { content: "Rev Ops", value: "Rev Ops" },
-                      { content: "Gross Profit_1", value: "Gross Profit_1" },
-                      { content: "Sales", value: "Sales" },
-                      {
-                        content: "Product & Engineering_300",
-                        value: "Product & Engineering_300",
-                      },
-                      {
-                        content: "Product & Engineering_1",
-                        value: "Product & Engineering_1",
-                      },
-                      { content: "CEO HR", value: "CEO HR" },
-                      {
-                        content: "Data System Engineering",
-                        value: "Data System Engineering",
-                      },
-                      {
-                        content: "General & Administrative_1",
-                        value: "General & Administrative_1",
-                      },
-                      { content: "CEO_1", value: "CEO_1" },
-                      {
-                        content: "Product & Engineering_200",
-                        value: "Product & Engineering_200",
-                      },
-                      {
-                        content: "Sales & Marketing_1",
-                        value: "Sales & Marketing_1",
-                      },
+                      { content: "Personnel", value: "Personnel" },
+                      { content: "Personnel", value: "Personnel" },
+                      { content: "Non-Personnel", value: "Non-Personnel" },
+                      { content: "Non-Personnel", value: "Non-Personnel" },
+                      { content: "Non-Personnel", value: "Non-Personnel" },
+                      { content: "Non-Personnel", value: "Non-Personnel" },
+                      { content: "Personnel", value: "Personnel" },
+                      { content: "Non-Personnel", value: "Non-Personnel" },
+                      { content: "Personnel", value: "Personnel" },
                     ],
                   },
                   {
@@ -160,164 +74,470 @@ export default ({ className }) => {
                     type: "cc_level3",
                     value: [
                       {
-                        content: "4310 Mgmt Customer Success",
-                        value: "4310 Mgmt Customer Success",
+                        content: "People & Organization",
+                        value: "People & Organization",
                       },
+                      { content: "Marketing", value: "Marketing" },
+                      { content: "RevOps", value: "RevOps" },
+                      { content: "Marketing", value: "Marketing" },
+                      { content: "RevOps", value: "RevOps" },
+                      { content: "CEO HR", value: "CEO HR" },
+                      { content: "Sales", value: "Sales" },
                       { content: null, value: null },
                       {
-                        content: "4140 Events & Messen",
-                        value: "4140 Events & Messen",
+                        content: "Product & Engineering_1",
+                        value: "Product & Engineering_1",
                       },
                       {
-                        content: "4130 Content Marketing",
-                        value: "4130 Content Marketing",
+                        content: "Data System Engineering",
+                        value: "Data System Engineering",
                       },
-                      { content: "1200 COGS", value: "1200 COGS" },
                       {
-                        content: "2220 People Operations",
-                        value: "2220 People Operations",
+                        content: "Customer Success",
+                        value: "Customer Success",
                       },
-                      { content: "1100 Revenue", value: "1100 Revenue" },
                       {
-                        content: "1000 Gross Profit",
-                        value: "1000 Gross Profit",
+                        content: "Product & Engineering_200",
+                        value: "Product & Engineering_200",
                       },
-                      { content: "4100 Marketing", value: "4100 Marketing" },
-                      { content: "4200 Sales", value: "4200 Sales" },
                       {
-                        content: "3020 Team Internet Explorers",
-                        value: "3020 Team Internet Explorers",
+                        content: "Finance, BI & Operations",
+                        value: "Finance, BI & Operations",
                       },
+                      {
+                        content: "Product & Engineering_300",
+                        value: "Product & Engineering_300",
+                      },
+                      { content: "Gross Profit_1", value: "Gross Profit_1" },
+                      {
+                        content: "Customer Success",
+                        value: "Customer Success",
+                      },
+                      {
+                        content: "Product & Engineering_300",
+                        value: "Product & Engineering_300",
+                      },
+                      {
+                        content: "General & Administrative_1",
+                        value: "General & Administrative_1",
+                      },
+                      {
+                        content: "Finance, BI & Operations",
+                        value: "Finance, BI & Operations",
+                      },
+                      {
+                        content: "Product & Engineering_1",
+                        value: "Product & Engineering_1",
+                      },
+                      { content: "CEO_1", value: "CEO_1" },
+                      { content: "Revenue", value: "Revenue" },
+                      {
+                        content: "Cost of Service (COGS)",
+                        value: "Cost of Service (COGS)",
+                      },
+                      { content: "CEO-Office", value: "CEO-Office" },
+                      {
+                        content: "Sales & Marketing_1",
+                        value: "Sales & Marketing_1",
+                      },
+                      {
+                        content: "People & Organization",
+                        value: "People & Organization",
+                      },
+                      { content: "CEO_1", value: "CEO_1" },
+                      { content: "CEO-Office", value: "CEO-Office" },
+                    ],
+                  },
+                  {
+                    content: "CC Level 4",
+                    type: "cc_level4",
+                    value: [
                       {
                         content: "2240 Employer Branding",
                         value: "2240 Employer Branding",
-                      },
-                      {
-                        content: "2230 Talent Acquisition",
-                        value: "2230 Talent Acquisition",
-                      },
-                      {
-                        content: "4230 Account Executives",
-                        value: "4230 Account Executives",
-                      },
-                      {
-                        content: "4300 Customer Success",
-                        value: "4300 Customer Success",
-                      },
-                      {
-                        content: "4340 Customer & Professional Service",
-                        value: "4340 Customer & Professional Service",
-                      },
-                      {
-                        content: "3000 Product & Engineering",
-                        value: "3000 Product & Engineering",
-                      },
-                      {
-                        content: "3010 Mgmt Product & Engineering",
-                        value: "3010 Mgmt Product & Engineering",
                       },
                       {
                         content: "4110 Mgmt Marketing",
                         value: "4110 Mgmt Marketing",
                       },
                       {
-                        content: "2200 People & Organization",
-                        value: "2200 People & Organization",
+                        content: "4120 Growth Marketing",
+                        value: "4120 Growth Marketing",
                       },
+                      {
+                        content: "4130 Content Marketing",
+                        value: "4130 Content Marketing",
+                      },
+                      {
+                        content: "4140 Events & Messen",
+                        value: "4140 Events & Messen",
+                      },
+                      { content: "2900 CEO HR", value: "2900 CEO HR" },
+                      { content: "4210 Mgmt Sales", value: "4210 Mgmt Sales" },
+                      { content: "4200 Sales", value: "4200 Sales" },
                       {
                         content: "4220 Sales Development",
                         value: "4220 Sales Development",
                       },
                       { content: "4210 Mgmt Sales", value: "4210 Mgmt Sales" },
                       {
-                        content: "4120 Growth Marketing",
-                        value: "4120 Growth Marketing",
+                        content: "4220 Sales Development",
+                        value: "4220 Sales Development",
                       },
                       {
-                        content: "4320 Customer Success Management",
-                        value: "4320 Customer Success Management",
+                        content: "3000 Product & Engineering",
+                        value: "3000 Product & Engineering",
                       },
-                      { content: "2900 CEO HR", value: "2900 CEO HR" },
+                      {
+                        content: "4230 Account Executives",
+                        value: "4230 Account Executives",
+                      },
+                      {
+                        content: "4230 Account Executives",
+                        value: "4230 Account Executives",
+                      },
                       {
                         content: "3100 Data System Engineering",
                         value: "3100 Data System Engineering",
                       },
                       {
-                        content: "2000 General & Administrative",
-                        value: "2000 General & Administrative",
-                      },
-                      { content: "3300 P&E", value: "3300 P&E" },
-                      { content: "5000 CEO", value: "5000 CEO" },
-                      {
-                        content: "3030 Team Daywalkers",
-                        value: "3030 Team Daywalkers",
+                        content: "4310 Mgmt Customer Success",
+                        value: "4310 Mgmt Customer Success",
                       },
                       { content: "3200 P&E", value: "3200 P&E" },
                       {
+                        content: "2100 Finance, BI & Operations",
+                        value: "2100 Finance, BI & Operations",
+                      },
+                      {
+                        content: "3010 Mgmt Product & Engineering",
+                        value: "3010 Mgmt Product & Engineering",
+                      },
+                      {
+                        content: "4300 Customer Success",
+                        value: "4300 Customer Success",
+                      },
+                      { content: "3300 P&E", value: "3300 P&E" },
+                      {
+                        content: "1000 Gross Profit",
+                        value: "1000 Gross Profit",
+                      },
+                      {
+                        content: "4320 Customer Success Management",
+                        value: "4320 Customer Success Management",
+                      },
+                      {
+                        content: "4310 Mgmt Customer Success",
+                        value: "4310 Mgmt Customer Success",
+                      },
+                      {
+                        content: "3020 Team Internet Explorers",
+                        value: "3020 Team Internet Explorers",
+                      },
+                      {
+                        content: "4320 Customer Success Management",
+                        value: "4320 Customer Success Management",
+                      },
+                      {
                         content: "4330 Customer Implementation",
                         value: "4330 Customer Implementation",
+                      },
+                      {
+                        content: "4330 Customer Implementation",
+                        value: "4330 Customer Implementation",
+                      },
+                      {
+                        content: "2110 Mgmt Finance, BI & Operations",
+                        value: "2110 Mgmt Finance, BI & Operations",
+                      },
+                      {
+                        content: "3010 Mgmt Product & Engineering",
+                        value: "3010 Mgmt Product & Engineering",
+                      },
+                      {
+                        content: "4340 Customer & Professional Service",
+                        value: "4340 Customer & Professional Service",
                       },
                       {
                         content: "4400 Customer Success",
                         value: "4400 Customer Success",
                       },
                       {
+                        content: "3020 Team Internet Explorers",
+                        value: "3020 Team Internet Explorers",
+                      },
+                      {
+                        content: "4400 Customer Success",
+                        value: "4400 Customer Success",
+                      },
+                      {
+                        content: "3030 Team Daywalkers",
+                        value: "3030 Team Daywalkers",
+                      },
+                      {
+                        content: "3030 Team Daywalkers",
+                        value: "3030 Team Daywalkers",
+                      },
+                      {
+                        content: "2000 General & Administrative",
+                        value: "2000 General & Administrative",
+                      },
+                      {
+                        content: "2100 Finance, BI & Operations",
+                        value: "2100 Finance, BI & Operations",
+                      },
+                      {
+                        content: "2110 Mgmt Finance, BI & Operations",
+                        value: "2110 Mgmt Finance, BI & Operations",
+                      },
+                      { content: "5010 Mgmt CEO", value: "5010 Mgmt CEO" },
+                      {
+                        content: "2120 Finance & Operations",
+                        value: "2120 Finance & Operations",
+                      },
+                      {
+                        content: "2120 Finance & Operations",
+                        value: "2120 Finance & Operations",
+                      },
+                      { content: "1100 Revenue", value: "1100 Revenue" },
+                      {
+                        content: "2130 Business Intelligence",
+                        value: "2130 Business Intelligence",
+                      },
+                      { content: "1200 COGS", value: "1200 COGS" },
+                      {
+                        content: "2130 Business Intelligence",
+                        value: "2130 Business Intelligence",
+                      },
+                      { content: "5000 CEO", value: "5000 CEO" },
+                      {
                         content: "4000 Sales & Marketing",
                         value: "4000 Sales & Marketing",
                       },
-                      { content: "5010 Mgmt CEO", value: "5010 Mgmt CEO" },
+                      {
+                        content: "2200 People & Organization",
+                        value: "2200 People & Organization",
+                      },
                       {
                         content: "2210 Mgmt People & Organization",
                         value: "2210 Mgmt People & Organization",
                       },
+                      { content: "4100 Marketing", value: "4100 Marketing" },
+                      {
+                        content: "2200 People & Organization",
+                        value: "2200 People & Organization",
+                      },
+                      {
+                        content: "4110 Mgmt Marketing",
+                        value: "4110 Mgmt Marketing",
+                      },
+                      {
+                        content: "2210 Mgmt People & Organization",
+                        value: "2210 Mgmt People & Organization",
+                      },
+                      { content: "5010 Mgmt CEO", value: "5010 Mgmt CEO" },
+                      {
+                        content: "2220 People Operations",
+                        value: "2220 People Operations",
+                      },
+                      {
+                        content: "2220 People Operations",
+                        value: "2220 People Operations",
+                      },
+                      {
+                        content: "2230 Talent Acquisition",
+                        value: "2230 Talent Acquisition",
+                      },
+                      { content: "4100 Marketing", value: "4100 Marketing" },
+                      {
+                        content: "2240 Employer Branding",
+                        value: "2240 Employer Branding",
+                      },
                     ],
                   },
+                  { content: "CC Level 5", type: "cc_level5", value: [] },
+                  { content: "CC Level 6", type: "cc_level6", value: [] },
                 ],
               },
               {
-                content: "Timeline",
+                content: "Chart of Accounts Levels",
                 value: [
                   {
-                    content: "Year",
-                    type: "year",
+                    content: "COA Level 1",
+                    type: "coa_level1",
                     value: [
-                      { content: "2017", value: "2017" },
-                      { content: "2018", value: "2018" },
-                      { content: "2019", value: "2019" },
-                      { content: "2020", value: "2020" },
-                      { content: "2021", value: "2021" },
-                      { content: "2022", value: "2022" },
-                      { content: "2023", value: "2023" },
-                      { content: "2024", value: "2024" },
-                      { content: "2025", value: "2025" },
-                      { content: "2026", value: "2026" },
+                      { content: "Non-personnel", value: "Non-personnel" },
+                      { content: "Unmapped", value: "Unmapped" },
+                      { content: "Personnel", value: "Personnel" },
                     ],
                   },
                   {
-                    content: "Month",
-                    type: "month",
+                    content: "COA Level 2",
+                    type: "coa_level2",
                     value: [
-                      { content: "01", value: "01" },
-                      { content: "02", value: "02" },
-                      { content: "03", value: "03" },
-                      { content: "04", value: "04" },
-                      { content: "05", value: "05" },
-                      { content: "06", value: "06" },
-                      { content: "07", value: "07" },
-                      { content: "08", value: "08" },
-                      { content: "09", value: "09" },
-                      { content: "10", value: "10" },
-                      { content: "11", value: "11" },
-                      { content: "12", value: "12" },
+                      {
+                        content: "Umsatzerl\u00f6se",
+                        value: "Umsatzerl\u00f6se",
+                      },
+                      {
+                        content: "Versich./Beitr\u00e4ge",
+                        value: "Versich./Beitr\u00e4ge",
+                      },
+                      {
+                        content: "Reparatur/Instandh.",
+                        value: "Reparatur/Instandh.",
+                      },
+                      {
+                        content: "Kfz-Kosten (o. St.)",
+                        value: "Kfz-Kosten (o. St.)",
+                      },
+                      {
+                        content: "Werbe-/Reisekosten",
+                        value: "Werbe-/Reisekosten",
+                      },
+                      {
+                        content: "Kosten Warenabgabe",
+                        value: "Kosten Warenabgabe",
+                      },
+                      { content: "Raumkosten", value: "Raumkosten" },
+                      {
+                        content: "Verr. kalk. Kosten",
+                        value: "Verr. kalk. Kosten",
+                      },
+                      {
+                        content: "Sonst. neutr. Ertr",
+                        value: "Sonst. neutr. Ertr",
+                      },
+                      {
+                        content: "Zinsertr\u00e4ge",
+                        value: "Zinsertr\u00e4ge",
+                      },
+                      { content: "Zinsaufwand", value: "Zinsaufwand" },
+                      {
+                        content: "Steuern Eink.u.Ertr",
+                        value: "Steuern Eink.u.Ertr",
+                      },
+                      {
+                        content: "Akt.Eigenleistungen",
+                        value: "Akt.Eigenleistungen",
+                      },
+                      { content: "Unmapped", value: "Unmapped" },
+                      {
+                        content: "Betriebl. Steuern",
+                        value: "Betriebl. Steuern",
+                      },
+                      { content: "Personalkosten", value: "Personalkosten" },
+                      {
+                        content: "Material, Stoffe und Waren",
+                        value: "Material, Stoffe und Waren",
+                      },
+                      {
+                        content: "Besondere Kosten",
+                        value: "Besondere Kosten",
+                      },
+                      { content: "Abschreibungen", value: "Abschreibungen" },
+                      {
+                        content: "Best.Verdg. FE/UE",
+                        value: "Best.Verdg. FE/UE",
+                      },
+                      {
+                        content: "Kontenkl. unbesetzt",
+                        value: "Kontenkl. unbesetzt",
+                      },
+                      { content: "Sonstige Kosten", value: "Sonstige Kosten" },
+                      {
+                        content: "Sonst. neutr. Aufw",
+                        value: "Sonst. neutr. Aufw",
+                      },
+                      {
+                        content: "So. betr. Erl\u00f6se",
+                        value: "So. betr. Erl\u00f6se",
+                      },
                     ],
                   },
+                  { content: "COA Level 3", type: "coa_level3", value: [] },
+                  { content: "COA Level 4", type: "coa_level4", value: [] },
+                  { content: "COA Level 5", type: "coa_level5", value: [] },
+                  { content: "COA Level 6", type: "coa_level6", value: [] },
+                ],
+              },
+              {
+                content: "Profit and Loss Levels",
+                value: [
+                  { content: "PNL Level 1", type: "pnl_level1", value: [] },
+                  { content: "PNL Level 2", type: "pnl_level2", value: [] },
+                  { content: "PNL Level 3", type: "pnl_level3", value: [] },
+                  { content: "PNL Level 4", type: "pnl_level4", value: [] },
+                  { content: "PNL Level 5", type: "pnl_level5", value: [] },
+                  { content: "PNL Level 6", type: "pnl_level6", value: [] },
+                ],
+              },
+              {
+                content: "Account",
+                type: "account",
+                value: [
+                  { content: 2700, value: 2700 },
+                  { content: 42000, value: 42000 },
+                  { content: 48000, value: 48000 },
+                  { content: 54000, value: 54000 },
+                  { content: 73001, value: 73001 },
+                ],
+              },
+              {
+                content: "Counter Accounts",
+                type: "counter_accounts",
+                value: [
+                  { content: 2700, value: 2700 },
+                  { content: 42000, value: 42000 },
+                  { content: 48000, value: 48000 },
+                  { content: 54000, value: 54000 },
+                  { content: 73001, value: 73001 },
+                ],
+              },
+              {
+                content: "Cost Center",
+                type: "cost_center",
+                value: [
+                  { content: "", value: "" },
+                  { content: "1000", value: "1000" },
+                  { content: "1100", value: "1100" },
+                  { content: "1200", value: "1200" },
+                  { content: "2000", value: "2000" },
+                  { content: "2100", value: "2100" },
                 ],
               },
             ],
           },
           { content: "Employee data", details: [] },
           { content: "Customer data", details: [] },
-          { content: "Timeline data", details: [] },
+          {
+            content: "Timeline",
+            value: [
+              {
+                content: "Year",
+                type: "year",
+                value: [{ content: 2021, value: 2021 }],
+              },
+              {
+                content: "Month",
+                type: "month",
+                value: [
+                  { content: 1, value: 1 },
+                  { content: 2, value: 2 },
+                  { content: 3, value: 3 },
+                  { content: 4, value: 4 },
+                  { content: 5, value: 5 },
+                  { content: 6, value: 6 },
+                  { content: 7, value: 7 },
+                  { content: 8, value: 8 },
+                  { content: 9, value: 9 },
+                  { content: 10, value: 10 },
+                  { content: 11, value: 11 },
+                  { content: 12, value: 12 },
+                ],
+              },
+            ],
+          },
         ],
       },
       { content: "Columns", type: "columns", details: [] },
@@ -329,28 +549,33 @@ export default ({ className }) => {
             content: "Item type",
             type: "itemtype",
             value: [
-              { content: "Actual", value: "Actual" },
-              { content: "Forecast", value: "Forecast" },
-              { content: "Budget", value: "Budget" },
+              { content: "Actual", value: "actual" },
+              { content: "Forecast", value: "forecast" },
+              { content: "Budget", value: "budget" },
               {
                 content: "Actual vs. Budget",
                 value: [
-                  { content: "Delta (%)", value: "Actual / Budget" },
-                  { content: "Delta (absolute)", value: "Actual / Budget" },
+                  {
+                    content: "Delta (%)",
+                    value: {
+                      "Actual vs. Forecast": ["Delta (%)", "Delta (absolute)"],
+                    },
+                  },
+                  { content: "Delta (absolute)", value: "actual / budget" },
                 ],
               },
               {
                 content: "Actual vs. Forecast",
                 value: [
-                  { content: "Delta (%)", value: "Actual / Forecast" },
-                  { content: "Delta (absolute)", value: "Actual / Forecast" },
+                  { content: "Delta (%)", value: "actual / forecast" },
+                  { content: "Delta (absolute)", value: "actual / forecast" },
                 ],
               },
               {
                 content: "Forecast vs. Budget",
                 value: [
-                  { content: "Delta (%)", value: "Forecast / Budget" },
-                  { content: "Delta (absolute)", value: "Forecast / Budget" },
+                  { content: "Delta (%)", value: "forecast / budget" },
+                  { content: "Delta (absolute)", value: "forecast / budget" },
                 ],
               },
             ],
@@ -407,7 +632,7 @@ export default ({ className }) => {
             </ul>
           </nav>
           <article>
-            {/* <pre>{JSON.stringify(settings, null, 2)}</pre> */}
+            <pre>{JSON.stringify(settings, null, 2)}</pre>
             <Modal>
               <Settings
                 close={close}
