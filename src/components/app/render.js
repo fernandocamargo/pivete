@@ -1,16 +1,18 @@
 import { useMemo } from "react";
 
 import { useModal } from "hooks";
-// import { Table } from "components/widgets";
+import { Table } from "components/widgets";
 
 import use from "./hooks";
 import Header from "./header";
 import Settings from "./settings";
 
 export default ({ className }) => {
-  const { Container: Modal, ...modal } = useModal({ open: true });
+  const { Container: Modal, ...modal } = useModal();
   // const { close, configure, empty, ref, settings, ...table } = use({ modal });
-  const { close, configure, settings, toggle } = use({ modal });
+  const { close, configure, empty, ref, settings, table, toggle } = use({
+    modal,
+  });
   const properties = useMemo(
     () => [
       {
@@ -555,12 +557,7 @@ export default ({ className }) => {
               {
                 content: "Actual vs. Budget",
                 value: [
-                  {
-                    content: "Delta (%)",
-                    value: {
-                      "Actual vs. Forecast": ["Delta (%)", "Delta (absolute)"],
-                    },
-                  },
+                  { content: "Delta (%)", value: "actual / budget" },
                   { content: "Delta (absolute)", value: "actual / budget" },
                 ],
               },
@@ -632,7 +629,7 @@ export default ({ className }) => {
             </ul>
           </nav>
           <article>
-            <pre>{JSON.stringify(settings, null, 2)}</pre>
+            <Table ref={ref} settings={settings} {...table} />
             <Modal>
               <Settings
                 close={close}
@@ -648,7 +645,3 @@ export default ({ className }) => {
     </div>
   );
 };
-
-/*
-            {!empty && <Table ref={ref} settings={settings} {...table} />}
-*/
