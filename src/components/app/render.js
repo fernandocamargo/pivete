@@ -10,7 +10,7 @@ import Settings from "./settings";
 export default ({ className }) => {
   const { Container: Modal, ...modal } = useModal();
   // const { close, configure, empty, ref, settings, ...table } = use({ modal });
-  const { close, configure, empty, ref, settings, table, toggle } = use({
+  const { close, configure, ref, settings, table, toggle } = use({
     modal,
   });
   const properties = useMemo(
