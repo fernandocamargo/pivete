@@ -51,6 +51,13 @@ export default ({ settings, ...props }) => {
 
     return props.rows.map(reconcile, []);
   }, [props.columns, props.rows]);
+  const { colSpan, rowSpan } = useMemo(
+    () => ({
+      colSpan: columns.nodes,
+      rowSpan: settings.columns.length + 2,
+    }),
+    [columns.nodes, settings.columns]
+  );
 
-  return { columns, rows, settings };
+  return { body: { rows }, head: { columns, colSpan, rowSpan } };
 };

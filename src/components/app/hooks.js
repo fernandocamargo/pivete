@@ -31,6 +31,14 @@ export default ({ modal: { open, close } }) => {
           value: [
             { content: "Actual", value: "Actual" },
             { content: "Forecast", value: "forecast" },
+            {
+              content: "Delta (%)",
+              value: { delta: { "Actual vs. Budget": ["Delta (%)"] } },
+            },
+            {
+              content: "Delta (absolute)",
+              value: { delta: { "Actual vs. Budget": ["Delta (absolute)"] } },
+            },
           ],
         },
       ],
