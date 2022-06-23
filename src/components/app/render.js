@@ -630,6 +630,7 @@ export default ({ className }) => {
           </nav>
           <article>
             <Table ref={ref} settings={settings} {...table} />
+            <p>LOL, this is a test</p>
             <Modal>
               <Settings
                 close={close}

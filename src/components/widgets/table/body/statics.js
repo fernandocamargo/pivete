@@ -1,3 +1,5 @@
-export const defaultProps = {};
+export const defaultProps = {
+  rows: [],
+};
 
 export const propTypes = {};

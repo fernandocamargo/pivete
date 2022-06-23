@@ -1,11 +1,8 @@
+import use from "./hooks";
 import { renderColumn } from "../render";
 
-export default ({ values = [], ...props }) => (
-  <>
-    {props.hasOwnProperty("value") ? (
-      <td>{props.value}</td>
-    ) : (
-      values.map(renderColumn)
-    )}
-  </>
-);
+export default (props) => {
+  const { deep, value, values } = use(props);
+
+  return deep ? values.map(renderColumn) : <td>{value}</td>;
+};

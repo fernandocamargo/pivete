@@ -6,8 +6,8 @@ import Column from "./column";
 
 export const renderColumn = (cell, index) => <Column key={index} {...cell} />;
 
-export default ({ details = [], values = [], content }) => {
-  const { open, toggle } = use();
+export default (props) => {
+  const { content, deep, details, open, toggle, values } = use(props);
   const label = useMemo(() => `${open ? "Hide" : "See"} details`, [open]);
 
   return (
@@ -17,7 +17,7 @@ export default ({ details = [], values = [], content }) => {
           <dl>
             <dt>{content}</dt>
             <dd>
-              {!!details.length && (
+              {deep && (
                 <nav>
                   <h4>Actions:</h4>
                   <ul>
@@ -34,7 +34,7 @@ export default ({ details = [], values = [], content }) => {
         </td>
         {values.map(renderColumn)}
       </tr>
-      {!!details.length && open && details.map(renderRow)}
+      {deep && open && details.map(renderRow)}
     </>
   );
 };
