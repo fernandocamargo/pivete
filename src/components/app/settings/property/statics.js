@@ -1,3 +1,5 @@
-export const defaultProps = {};
+export const defaultProps = {
+  selection: [],
+};
 
 export const propTypes = {};

@@ -9,8 +9,16 @@ export const concat = ({ path: { indexes, value }, parent }, fragment) => ({
 
 export const get = (input, output = []) => {
   const format = ({ content, type }) => ({ value: [], content, type });
-  const extract = (stack, item) =>
-    item.type ? stack.concat(format(item)) : get(item.value, stack);
+  const extract = (stack, item) => {
+    switch (true) {
+      case !!item.type:
+        return stack.concat(format(item));
+      case isArray(item.value):
+        return get(item.value, stack);
+      default:
+        return stack.concat(item);
+    }
+  };
 
   return isArray(input) ? input.reduce(extract, output) : format(input);
 };

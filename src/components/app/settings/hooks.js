@@ -4,10 +4,6 @@ import { useCallback, useMemo } from "react";
 import { concat, get, verify } from "./helpers";
 
 export default ({ settings, toggle, ...props }) => {
-  const translate = useCallback(
-    (value) => ({ null: "Unknown", "": "Unknown" }[value] || value),
-    []
-  );
   const check = useCallback(
     (params) => {
       const deep = params.hasOwnProperty("value");
@@ -25,10 +21,11 @@ export default ({ settings, toggle, ...props }) => {
     ) => {
       const fill = (items = []) => ({ checked: false, items });
       const transform = (stack, current, index) => {
-        const content = translate(current.content);
+        const { content, type } = current;
+        const { [type]: selection } = settings;
         const path = {
           indexes: inheritance.path.indexes.concat(index),
-          value: inheritance.path.value.concat(current.type || []),
+          value: inheritance.path.value.concat(type || []),
         };
         const uuid = path.indexes.join(".");
         const details = iterate(
@@ -48,7 +45,7 @@ export default ({ settings, toggle, ...props }) => {
         });
         const resolve = () => {
           switch (true) {
-            case !!current.type:
+            case !!type:
               return [inheritance.path.value, get(current)];
             case !isArray(current.value):
               return [path.value, inherit(current)];
@@ -59,6 +56,8 @@ export default ({ settings, toggle, ...props }) => {
         const onChange = () => {
           const [target, source] = resolve();
 
+          console.log({ path: target, value: source, checked });
+
           return toggle({ path: target, value: source, checked });
         };
         const next = {
@@ -67,6 +66,7 @@ export default ({ settings, toggle, ...props }) => {
           checked,
           content,
           onChange,
+          selection,
           uuid,
         };
         const items = stack.items.concat(next);
@@ -76,7 +76,7 @@ export default ({ settings, toggle, ...props }) => {
 
       return isArray(object) ? object.reduce(transform, fill()) : fill(object);
     },
-    [check, toggle, translate]
+    [check, settings, toggle]
   );
   const properties = useMemo(
     () => iterate(props.properties).items,

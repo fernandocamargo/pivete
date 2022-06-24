@@ -1,18 +1,25 @@
 import { useModal } from "hooks";
 
 import use from "./hooks";
-// import Item from "./item";
+import Item from "./item";
 import Value from "./value";
+
+export const renderSelection = (selection, index) => (
+  <Item key={index} {...selection} />
+);
 
 export default ({ className, ...props }) => {
   const { Container: Modal, ...modal } = useModal();
-  const { content, create, details } = use({ modal, ...props });
+  const { content, create, deep, details, selection } = use({
+    modal,
+    ...props,
+  });
 
   return (
     <dl className={className}>
       <dt>{content}</dt>
       <dd>
-        {!!details.length && (
+        {deep && (
           <nav>
             <h4>Actions:</h4>
             <ul>
@@ -27,12 +34,7 @@ export default ({ className, ...props }) => {
             </Modal>
           </nav>
         )}
-        {/*
-        <Item content="Office ID" />
-        <Item content="CC Level 1" />
-        <Item content="CC Level 3" />
-        <Item content="Month" />
-        */}
+        {selection.map(renderSelection)}
       </dd>
     </dl>
   );

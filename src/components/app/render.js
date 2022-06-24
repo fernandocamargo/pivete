@@ -8,7 +8,7 @@ import Header from "./header";
 import Settings from "./settings";
 
 export default ({ className }) => {
-  const { Container: Modal, ...modal } = useModal();
+  const { Container: Modal, ...modal } = useModal({ open: true });
   // const { close, configure, empty, ref, settings, ...table } = use({ modal });
   const { close, configure, ref, settings, table, toggle } = use({
     modal,
@@ -29,6 +29,10 @@ export default ({ className }) => {
                   {
                     content: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
                     value: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
+                  },
+                  {
+                    content: "b1060606-c7f3-4749-bf4f-adb84885ebcd",
+                    value: "b1060606-c7f3-4749-bf4f-adb84885ebcd",
                   },
                 ],
               },
@@ -557,8 +561,16 @@ export default ({ className }) => {
               {
                 content: "Actual vs. Budget",
                 value: [
-                  { content: "Delta (%)", value: "actual / budget" },
-                  { content: "Delta (absolute)", value: "actual / budget" },
+                  {
+                    content: "Delta (%)",
+                    value: { delta: { "Actual vs. Budget": ["Delta (%)"] } },
+                  },
+                  {
+                    content: "Delta (absolute)",
+                    value: {
+                      delta: { "Actual vs. Budget": ["Delta (absolute)"] },
+                    },
+                  },
                 ],
               },
               {

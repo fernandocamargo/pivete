@@ -12,8 +12,8 @@ export default ({ modal: { open, close } }) => {
           type: "office_id",
           value: [
             {
-              content: "b1060606-c7f3-4749-bf4f-adb84885ebcd",
-              value: "b1060606-c7f3-4749-bf4f-adb84885ebcd",
+              content: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
+              value: "7be5f650-6db1-42ab-b842-b16dd990cdbd",
             },
           ],
         },
