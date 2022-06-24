@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 
 import * as reducers from "./reducers";
 
-export default ({ content, details, values }) => {
+export default ({ content, depth, details, values }) => {
   const [{ open }, persist] = useState({ open: false });
   const deep = useMemo(() => !!details.length, [details.length]);
   const toggle = useCallback(
@@ -10,5 +10,5 @@ export default ({ content, details, values }) => {
     []
   );
 
-  return { content, deep, details, open, toggle, values };
+  return { content, deep, depth, details, open, toggle, values };
 };

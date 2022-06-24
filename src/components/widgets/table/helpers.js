@@ -3,7 +3,7 @@ import set from "lodash/set";
 
 export const calculate = (columns, indexes = {}) => {
   const iterate = (stack, { content, type, ...column }) => {
-    const { [content]: value = 0 } = indexes;
+    const { [content]: value = "-" } = indexes;
     const values = calculate(column.details, value);
     const properties = values ? { values } : { value };
 

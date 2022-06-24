@@ -14,42 +14,47 @@ export default ({ settings, ...props }) => {
     [settings]
   );
   const columns = useMemo(() => {
-    const reconcile = (current, { content, type, ...column }) => {
+    const reconcile = (stack, { content, type, ...column }) => {
       const {
         columns: { [type]: index },
       } = indexes;
+      const depth = stack.depth + 1;
       const { nodes, tree } = iterate(column.details, {
         nodes: 0,
-        tree: current.tree,
+        tree: stack.tree,
+        depth,
       });
       const increment = (value = 0) => value + Math.max(nodes, 1);
       const concat = (fragments = { details: [] }) => ({
-        details: fragments.details.concat({ content, nodes, type }),
+        details: fragments.details.concat({ content, depth, nodes, type }),
       });
       const resolve = () => update(tree, { [index]: { $apply: concat } });
 
-      return update(current, {
+      return update(stack, {
         nodes: { $apply: increment },
         tree: { $apply: resolve },
       });
     };
-    const iterate = (input, output = { tree: [], nodes: 0 }) =>
+    const iterate = (input, output = { depth: 0, nodes: 0, tree: [] }) =>
       isArray(input) ? input.reduce(reconcile, output) : output;
 
     return iterate(props.columns);
   }, [props.columns, indexes]);
   const rows = useMemo(() => {
-    const reconcile = (row) => {
-      const details = row?.details?.map(reconcile);
+    const reconcile = (stack, { content, type, ...row }) => {
+      const depth = stack.depth + 1;
+      const details = row?.details?.reduce(reconcile, {
+        tree: [],
+        depth,
+      })?.tree;
       const values = calculate(props.columns, index(row.values));
 
-      return update(row, {
-        details: { $set: details },
-        values: { $set: values },
+      return update(stack, {
+        tree: { $push: [{ content, depth, details, type, values }] },
       });
     };
 
-    return props.rows.map(reconcile, []);
+    return props.rows.reduce(reconcile, { depth: 0, tree: [] });
   }, [props.columns, props.rows]);
   const { colSpan, rowSpan } = useMemo(
     () => ({

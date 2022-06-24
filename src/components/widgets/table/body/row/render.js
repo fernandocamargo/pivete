@@ -6,32 +6,19 @@ import Column from "./column";
 
 export const renderColumn = (cell, index) => <Column key={index} {...cell} />;
 
-export default (props) => {
-  const { content, deep, details, open, toggle, values } = use(props);
+export default ({ className, ...props }) => {
+  const { content, deep, depth, details, open, toggle, values } = use(props);
   const label = useMemo(() => `${open ? "Hide" : "See"} details`, [open]);
+  const code = useMemo(() => content.at(0), [content]);
 
   return (
     <>
-      <tr>
-        <td>
-          <dl>
-            <dt>{content}</dt>
-            <dd>
-              {deep && (
-                <nav>
-                  <h4>Actions:</h4>
-                  <ul>
-                    <li>
-                      <a href="/" onClick={toggle} title={label}>
-                        {label}
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              )}
-            </dd>
-          </dl>
-        </td>
+      <tr aria-expanded={open} className={className}>
+        <Column depth={depth}>
+          <a href="/" onClick={toggle} title={label}>
+            <dfn aria-label={code}>{content}</dfn>
+          </a>
+        </Column>
         {values.map(renderColumn)}
       </tr>
       {deep && open && details.map(renderRow)}

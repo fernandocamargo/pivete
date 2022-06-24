@@ -2,13 +2,44 @@ import property from "lodash/property";
 import styled from "styled-components";
 
 export default (component) => styled(component)`
+  background-color: #fff;
+  left: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &:after {
+    background-color: #f1f3f5;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+
   tr {
     &:first-of-type {
       th {
         font-size: 0;
 
         &:first-of-type {
-          border-right: 1px dashed #e5e9ec;
+          background-color: #fff;
+          left: 0;
+          position: sticky;
+          top: 0;
+
+          &:after {
+            border-right: 1px dashed #e5e9ec;
+            content: "";
+            display: block;
+            height: 100%;
+            left: 100%;
+            position: absolute;
+            top: 0;
+            width: 0;
+          }
         }
       }
     }

@@ -1,8 +1,15 @@
 import use from "./hooks";
 import { renderColumn } from "../render";
 
-export default (props) => {
+export default ({ children, className, ...props }) => {
   const { deep, value, values } = use(props);
 
-  return deep ? values.map(renderColumn) : <td>{value}</td>;
+  switch (true) {
+    case !!children:
+      return <td className={className}>{children}</td>;
+    case deep:
+      return values.map(renderColumn);
+    default:
+      return <td className={className}>{value}</td>;
+  }
 };
