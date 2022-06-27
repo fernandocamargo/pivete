@@ -43,8 +43,8 @@ export default (component) => styled(component)`
     border: 0.5px solid #e5e9ec;
     border-radius: 4px;
     display: flex;
-    padding: 7px 13.5px 7px 34.5px;
-    width: calc(100% - 48px);
+    padding: 7px 13.5px;
+    width: calc(100% - 27px);
 
     &:hover {
       border-color: #3084f2;

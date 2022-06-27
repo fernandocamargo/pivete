@@ -9,7 +9,6 @@ import Settings from "./settings";
 
 export default ({ className }) => {
   const { Container: Modal, ...modal } = useModal({ open: true });
-  // const { close, configure, empty, ref, settings, ...table } = use({ modal });
   const { close, configure, ref, settings, table, toggle } = use({
     modal,
   });

@@ -11,6 +11,7 @@ export default (component) => styled(component)`
 
   td {
     box-shadow: inset 0px 1px 0px #ececec, inset 0px -1px 0px #ececec;
+    transition: background-color 0.15s ease-in-out;
 
     &:first-of-type {
       background-color: #fff;

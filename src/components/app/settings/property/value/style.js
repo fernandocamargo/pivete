@@ -16,6 +16,8 @@ export default (component) => styled(component)`
 
   & > {
     details {
+      margin-top: 16px;
+
       & > summary,
       & > details > summary {
         align-items: center;
@@ -45,16 +47,6 @@ export default (component) => styled(component)`
           text-indent: -9999px;
           transition: transform 0.15s ease-in-out;
           width: 4px;
-        }
-      }
-
-      &:not(:first-of-type) {
-        & > {
-          summary {
-            // filter: grayscale(1);
-            // opacity: 0.5;
-            // pointer-events: none;
-          }
         }
       }
     }
@@ -116,16 +108,14 @@ export default (component) => styled(component)`
             width: 18px;
             z-index: 1;
           }
+
+          ${Checkbox} {
+            margin-top: 5px;
+          }
         }
 
         ${Checkbox} {
-          margin: 5px 14px 0 28px;
-          width: calc(100% - 42px);
-
-          span {
-            padding: 7px 13.5px;
-            width: calc(100% - 27px);
-          }
+          width: 100%;
         }
       }
     }

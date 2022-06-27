@@ -1,7 +1,7 @@
 import { Details } from "components/widgets";
 import { Checkbox } from "components/widgets/fields";
 
-import { renderValue } from "../render";
+import { renderValue } from "../../render";
 import use from "./hooks";
 
 export default ({ children, className, ...props }) => {

@@ -1,15 +1,17 @@
-import { Details } from "components/widgets";
+import { Details as Wrapper } from "components/widgets";
 
-import Self from ".";
-import { renderValue } from "./value/render";
+import Details from ".";
+import Value from "./value";
 
 export const renderDetails = (details, index) => (
-  <Self key={index} {...details} />
+  <Details key={index} {...details} />
 );
 
-export default ({ content, details, value }) => (
-  <Details summary={content}>
+export const renderValue = (value) => <Value key={value.uuid} {...value} />;
+
+export default ({ className, content, details, value }) => (
+  <Wrapper className={className} summary={content}>
     {details.map(renderDetails)}
     {value.map(renderValue)}
-  </Details>
+  </Wrapper>
 );

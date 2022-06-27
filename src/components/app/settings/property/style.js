@@ -3,9 +3,6 @@ import styled from "styled-components";
 import Item from "./item";
 
 export default (component) => styled(component)`
-  // cursor: ${({ details }) => (!!details.length ? "default" : "not-allowed")};
-  // opacity: ${({ details }) => (!!details.length ? 1 : 0.5)};
-  // pointer-events: ${({ details }) => (!!details.length ? "auto" : "none")};
   position: relative;
 
   & > {

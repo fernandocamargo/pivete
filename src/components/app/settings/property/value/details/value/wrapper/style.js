@@ -7,6 +7,8 @@ export default (component) => styled(component)`
 
   & > details {
     max-height: 25vh;
+    padding-left: 28px;
+    padding-right: 14px;
     overflow-y: auto;
   }
 `;
